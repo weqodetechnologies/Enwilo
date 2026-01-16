@@ -51,6 +51,10 @@
   position: relative;
 }
 
+.dropdown-toggle img{
+     left: 76px;
+}
+
 .dropdown-menu {
   position: absolute;
   top: 45px;
@@ -1902,24 +1906,37 @@
 }
 
 .stat-card img {
-  width: 30px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
 }
 
 .stat-card.top {
   top: -20px;
-  right: 50%;
+  width: 140px;
+  height: 35px;
+  right: 60%;
   transform: translateX(50%);
 }
 
+.stat-card.top p{
+  font-size: 10px;
+}
+
+
 .stat-card.middle {
   bottom: 40px;
-  right: -20px;
+  right: 20px;
+}
+.stat-card.middle p{
+  font-size: 10px;
 }
 
 .stat-card.bottom {
   bottom: -20px;
-  left: -20px;
+  left: 100px;
+}
+.stat-card.bottom p{
+  font-size: 10px;
 }
 
 .stat-card strong {
@@ -1975,10 +1992,11 @@
 }
 
 .about-image img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 20px; 
+  max-width: 500px;
+  padding: 20px;          /* ← padding in px */
+  border-radius: 50px;
   object-fit: cover;
+  background: #fff;       /* optional (needed if you want visible padding) */
 }
 
 .about-text {
@@ -2022,6 +2040,7 @@
 
 .vision-mission-section {
   padding: 60px 20px;
+  padding-top: 10px;
   background-color: #fff;
   font-family: Arial, sans-serif;
   text-align: center;
@@ -2029,6 +2048,7 @@
 
 .vision-mission-section h2 {
   font-size: 32px;
+  width: 1500px;
   font-weight: bold;
   margin-bottom: 40px;
 }
@@ -2036,24 +2056,26 @@
 .cards-container {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 200px;
   flex-wrap: wrap; /* Makes it responsive */
 }
 
 .card {
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 25px;
   padding: 30px 20px;
+  border-color: #000;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  max-width: 300px;
+  max-width: 550px;
+  height: 420px;
   text-align: center;
   flex: 1;
   min-width: 250px;
 }
 
 .card img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   object-fit: contain;
   margin-bottom: 20px;
 }
@@ -2095,7 +2117,7 @@
 .why-section {
   padding: 80px 0;
   background: #f9fafb;
-  padding-top: 5px;
+  padding-top: 10px;
 }
 
 .why-container {
@@ -2218,5 +2240,265 @@
 
   .cen-image img {
     height: 360px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* FAQ SECTION */
+.faq-section {
+  padding: 100px 20px;
+  background: #ffffff;
+}
+
+/* CONTAINER */
+.faq-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* LEFT SIDE */
+.faq-left {
+  flex: 1;
+}
+
+.faq-left h2 {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.faq-left p {
+  font-size: 16px;
+  line-height: 26px;
+  color: #666;
+  max-width: 400px;
+}
+
+/* RIGHT SIDE */
+.faq-right {
+  flex: 1;
+}
+
+/* FAQ ITEM */
+.faq-item {
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* QUESTION */
+.faq-question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 18px 22px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* ICON */
+.faq-question .icon {
+  font-size: 22px;
+}
+
+/* ANSWER */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: #fafafa;
+}
+
+.faq-answer p {
+  padding: 16px 22px 22px;
+  font-size: 15px;
+  color: #555;
+}
+
+/* ACTIVE */
+.faq-item.active .faq-answer {
+  max-height: 200px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .faq-container {
+    flex-direction: column;
+  }
+
+  .faq-left h2 {
+    font-size: 42px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*contact us*/       /*contact us*/    /*contact us*/      /*contact us*/        /*contact us*/
+
+
+
+
+.contact-section {
+  padding: 100px 20px;
+  background: #ffffff;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 80px;
+}
+
+/* LEFT */
+.contact-left {
+  flex: 1;
+}
+
+.contact-left h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.contact-desc {
+  color: #777;
+  font-size: 16px;
+  max-width: 420px;
+  margin-bottom: 40px;
+}
+
+.contact-left h3 {
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.info-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.info-icon {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.info-item h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.info-item p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* RIGHT FORM */
+.contact-form {
+  flex: 1;
+  background: #fff;
+  border-radius: 18px;
+  padding: 35px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.contact-form label {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 120px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #ff7a18, #ff9f43);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
   }
 }
