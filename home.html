@@ -18,7 +18,7 @@
   <img src="images/logo.png" alt="Logo" class="logo"/>
 
   <nav class="nav-links">
-    <a href="#">Home</a>
+    <a href="home.html">Home</a>
     <a href="about.html">About</a>
     <a href="blogs.html">Blogs</a>
 
@@ -42,10 +42,46 @@
 
   <!-- RIGHT SIDE -->
   <div class="nav-actions">
-    <a href="#" class="login-btn">Log in</a>
-    <button class="add-btn">+ Add Listing</button>
+    <a href="#login-popup" class="login-btn">Log in</a>
+    <button href="login-popupp" class="add-btn">+ Add Listing</button>
   </div>
 </header>
+
+
+
+
+
+
+
+<!-- LOGIN POPUP -->
+<div id="login-popup" class="login-overlay">
+
+  <div class="login-box">
+    <a href="#" class="close-login">&times;</a>
+
+    <h2>Hello, Welcome Back</h2>
+    <p class="login-subtitle">Login to Continue</p>
+
+    <form>
+      <label>Email</label>
+      <input type="email" placeholder="Enter Your Email">
+
+      <label>Password</label>
+      <input type="password" placeholder="Enter Your Password">
+
+      <a href="#" class="forgot-link">Forgot Password?</a>
+
+      <button class="login-btn-main">Login</button>
+
+      <p class="signup-text">
+        Don’t have any account? <a href="#">Sign up</a>
+      </p>
+    </form>
+  </div>
+</div>
+
+
+
 
 
 
@@ -86,12 +122,13 @@
         <button class="search-btn">
           Search<img src="images/search.png
              ">
-        </button>
-        
+        </button>    
       </div>
     </div>
   </div>
 </section>
+
+
 
 
 
@@ -140,35 +177,33 @@
 
 
 
-<!-- ABOUT SECTION -->
-<section class="about-section">
-  <div class="about-container">
 
-    <!-- LEFT CONTENT -->
-    <div class="about-text">
-      <h2>About Enwilo</h2>
 
-      <p>
-        We connect students with the best institutes and courses in their city
-        through a trusted platform that offers verified listings, authentic
-        reviews and seamless enquiry options making the search simple reliable
-        and stress free while helping learners choose the right educational
-        path with confidence.
-      </p>
 
-      <p>
-        Whether you’re looking for skill development, higher education, or
-        coaching classes, we help you make informed decisions and save time.
-      </p>
+
+ <section class="about-section">
+    <div class="about-container">
+      <!-- Text content -->
+      <div class="about-text">
+        <h2>About Enwilo</h2>
+        <p>
+          We connect students with the best institutes and courses in their city through a trusted platform that offers verified listings, authentic reviews, and seamless enquiry options making the search simple, reliable, and stress-free while helping learners choose the right educational path with confidence.
+        </p>
+        <p>
+          Whether you’re looking for skill development, higher education, or coaching classes, we help you make informed decisions and save time.
+        </p>
+      </div>
+
+      <!-- Image content -->
+      <div class="about-image">
+        <img src="images/girl.png" alt="Student">
+      </div>
     </div>
+  </section>
 
-    <!-- RIGHT IMAGE -->
-    <div class="about-image">
-      <img src="images/girl.png" alt="About Enwilo">
-    </div>
 
-  </div>
-</section>
+
+
 
 
 
@@ -236,6 +271,12 @@
 
 
 
+
+
+
+
+
+
 <section class="how-it-works">
   <h2>How It Works</h2>
   <p class="subtitle">
@@ -277,6 +318,10 @@
 
   </div>
 </section>
+
+
+
+
 
 
 
@@ -418,6 +463,9 @@
     </div>
   </div>
 </section>
+
+
+
 
 
 
