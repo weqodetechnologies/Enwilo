@@ -2,11 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", Arial, sans-serif;
 }
 
 
-
+/* 2. Body styles */
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  font-family: "Nunito", sans-serif;
+}
 
 
 /* NAVBAR */
@@ -367,6 +372,7 @@
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 14px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .hero-content p {
@@ -609,7 +615,8 @@
   font-size: 48px;              
   font-weight: 800;
   color: #000;
-  margin-bottom: 20px;         
+  margin-bottom: 20px;   
+  font-family: "Montserrat", sans-serif;      
 }
 
 .about-text p {
@@ -708,6 +715,7 @@
   font-size: 40px;
   font-weight: 800;
   margin-bottom: 14px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .why-heading p {
@@ -756,6 +764,7 @@
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .why-card p {
@@ -805,6 +814,7 @@
 @media (max-width: 600px) {
   .why-heading h2 {
     font-size: 32px;
+    font-family: "Montserrat", sans-serif;
   }
 
   .why-column {
@@ -837,6 +847,7 @@
   font-size: 42px;
   font-weight: 800;
   margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .subtitle {
@@ -896,6 +907,7 @@
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 14px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .step-card p {
@@ -971,6 +983,7 @@
   font-weight: 700;
   margin-bottom: 16px;
   color: #111;
+  font-family: "Montserrat", sans-serif;
 }
 
 .sms-desc {
@@ -1078,6 +1091,7 @@
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 14px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .sms-desc {
@@ -1535,6 +1549,7 @@
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 6px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .card1-body p {
@@ -1964,6 +1979,7 @@
   font-weight: bold;
   line-height: 1.2;
   margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .hero-text p {
@@ -2129,6 +2145,7 @@
   font-size: 28px;
   margin-bottom: 20px;
   font-weight: bold;
+  font-family: "Montserrat", sans-serif;
 }
 
 .about-text p {
@@ -2172,6 +2189,7 @@
   width: 1500px;
   font-weight: bold;
   margin-bottom: 40px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .cards-container {
@@ -2257,6 +2275,7 @@
   font-size: 40px;
   font-weight: 800;
   margin-bottom: 14px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .why-heading p {
@@ -2398,6 +2417,7 @@
   font-size: 64px;
   font-weight: 700;
   margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .faq-left p {
@@ -2536,6 +2556,7 @@
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 15px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .contact-desc {
@@ -2548,6 +2569,7 @@
 .contact-left h3 {
   font-size: 22px;
   margin-bottom: 25px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .contact-info {
@@ -2571,6 +2593,7 @@
 .info-item h4 {
   font-size: 16px;
   margin-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .info-item p {
@@ -2719,6 +2742,7 @@
   font-weight: 600;
   margin-bottom: 10px;
   line-height: 1.4;
+  font-family: "Montserrat", sans-serif;
 }
 
 .blog-content p {
@@ -2797,6 +2821,7 @@
 
   .blog-content h3 {
     font-size: 15px;
+    font-family: "Montserrat", sans-serif;
   }
 
   .blog-content p {
@@ -2839,6 +2864,7 @@
 .blog-body h1 {
   font-size: 28px;
   margin: 14px 0 18px;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* ================= RIGHT SIDEBAR ================= */
@@ -2847,6 +2873,7 @@
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* CARD */
@@ -2899,6 +2926,7 @@
   font-weight: 600;
   line-height: 1.4;
   color: #111;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* DATE */
@@ -2971,6 +2999,7 @@
   font-size: 30px;
   margin: 16px 0 20px;
   line-height: 1.35;
+  font-family: "Montserrat", sans-serif;
 }
 
 .blog-body p {
@@ -3002,6 +3031,7 @@ blockquote {
 
 .blog-sidebar h3 {
   margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .related-card {
@@ -3022,6 +3052,7 @@ blockquote {
   font-size: 14px;
   line-height: 1.4;
   margin: 6px 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 .tag {
