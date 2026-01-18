@@ -1388,38 +1388,74 @@ body {
   gap: 14px;
 }
 
-/* CHIP */
+/* BASE CHIP */
 .chip {
-  padding: 12px 22px;
+  padding: 13px 32px;              /* BIG SIZE */
   border-radius: 999px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   color: #222;
-  border: 1px solid #e5e5e5;
+  letter-spacing: 0.2px; 
+  border: 1px solid #e6e6e6;
   background: #fff;
   cursor: pointer;
-  transition: all 0.3s ease;
   white-space: nowrap;
+
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  transition: all 0.25s ease;
 }
 
-/* ACTIVE CHIP */
+/* ACTIVE (BLUE) */
 .chip.active {
   background: #1e40af;
   color: #fff;
   border-color: #1e40af;
+  box-shadow: 0 8px 20px rgba(30,64,175,0.35);
 }
 
-/* GRAY CHIPS */
+
+/* NORMAL WHITE (SECOND LEVEL) */
+.chips-row:not(.secondary) .chip:not(.active) {
+  padding: 12px 30px;
+  font-size: 14px;
+}
+
+/* GRAY CHIPS (SMALLEST) */
 .chip.gray {
+  padding: 10px 20px;     /* SMALL */
+  font-size: 13px;
   background: #ededed;
   border-color: #ededed;
   color: #333;
+  box-shadow: none;
+  cursor: default;
 }
 
-/* HOVER */
-.chip:hover {
+/* HOVER ONLY FOR WHITE/BLUE */
+.chip:not(.gray):hover {
   transform: translateY(-2px);
 }
+
+@media (max-width: 768px) {
+  .chip {
+    padding: 11px 20px;
+    font-size: 13px;
+  }
+
+  .chip.gray {
+    padding: 9px 16px;
+    font-size: 12px;
+  }
+
+}
+
+
+
+
+
+
+
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -1571,6 +1607,45 @@ body {
   border-radius: 999px;
   border: 1px solid #ddd;
 }
+/* IMAGE WRAPPER */
+.card-img {
+  position: relative;
+}
+
+/* IMAGE */
+.card-img img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+
+/* RATING OVER IMAGE (EXACT FIGMA) */
+.rating1 {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+
+  background: #ffffff;
+  padding: 4px 8px;
+  border-radius: 6px;
+
+  font-size: 13px;
+  font-weight: 500;
+  color: #facc15;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.rating1 span {
+  color: #555;
+  font-size: 12px;
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 1024px) {
@@ -1605,6 +1680,7 @@ body {
 
 .cta-section {
   padding: 80px 0;
+  padding-top: 4px;
   background: #fff;
 }
 
@@ -1631,7 +1707,7 @@ body {
 }
 
 .cta-content h2 {
-  font-size: 35px;
+  font-size: 34px;
   font-weight: 650;
   margin-bottom: 16px;
   font-family: "Montserrat", sans-serif;
