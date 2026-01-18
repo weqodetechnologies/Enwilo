@@ -105,3 +105,29 @@ filterButtons.forEach(btn => {
 
 // Initially show only Kids School
 showCards('Kids School');
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const chips = document.querySelectorAll(".chip");
+
+  chips.forEach(chip => {
+    chip.addEventListener("click", function () {
+
+      // gray chip ko ignore karo
+      if (this.classList.contains("gray")) return;
+
+      // toggle active (ON / OFF)
+      this.classList.toggle("active");
+    });
+  });
+
+});
