@@ -131,3 +131,85 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+
+
+
+
+
+
+
+
+
+
+ function playVideo() {
+    const video = document.getElementById("myVideo");
+    video.play();
+    document.querySelector(".play-btn").style.display = "none";
+    video.setAttribute("controls", "controls");
+  }
+
+
+
+
+
+
+
+
+ 
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    alert("Message sent successfully!");
+
+    // redirect after submit
+    window.location.href = "thank-you.html";
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// OPEN POPUP
+const loginBtn = document.querySelector('.login-btn');
+const popup = document.getElementById('login-popup');
+const closeBtn = document.querySelector('.close-btn');
+
+loginBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  popup.style.display = 'flex';
+});
+
+// CLOSE POPUP
+closeBtn.addEventListener('click', () => {
+  popup.style.display = 'none';
+});
+
+// CLOSE WHEN CLICK OUTSIDE POPUP
+window.addEventListener('click', (e) => {
+  if(e.target === popup) {
+    popup.style.display = 'none';
+  }
+});
+
+// TOGGLE PASSWORD VISIBILITY
+const togglePassword = document.querySelector('.toggle-password');
+const passwordInput = document.getElementById('password');
+
+togglePassword.addEventListener('click', () => {
+  if(passwordInput.type === "password") {
+    passwordInput.type = "text";
+  } else {
+    passwordInput.type = "password";
+  }
+});
+
