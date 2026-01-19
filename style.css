@@ -370,7 +370,7 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 52px;
+  font-size: 48px;
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 14px;
@@ -594,7 +594,7 @@ body {
 /* ================= ABOUT SECTION ================= */
 
 .about-section {             
-  background: #ffffff;
+  background: #f9fafb;
 }
 
 /* CONTAINER */
@@ -828,6 +828,122 @@ body {
 
 
 
+.video-section {
+  padding: 80px 20px;
+  display: flex;
+  background: #fff;
+  justify-content: center;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 1300px;
+  height: 100px;
+
+  background: #bdbdbd;        /* grey background */
+  border-radius: 28px;        /* same as figma */
+  overflow: hidden;
+}
+
+/* VIDEO */
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* PLAY BUTTON */
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 80px;
+  height: 80px;
+  background: #e5e5e5;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 32px;
+  color: #333;
+  cursor: pointer;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease;
+}
+
+.play-btn:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+/* ================= RESPONSIVE VIDEO ================= */
+
+/* LARGE SCREENS (default already ok) */
+.video-wrapper {
+  aspect-ratio: 16 / 9;   /* 👈 auto height maintain */
+  height: auto;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .video-wrapper {
+    max-width: 90%;
+    border-radius: 24px;
+  }
+
+  .play-btn {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .video-section {
+    padding: 50px 16px;
+  }
+
+  .video-wrapper {
+    max-width: 100%;
+    border-radius: 20px;
+  }
+
+  .play-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 400px) {
+  .video-wrapper {
+    border-radius: 16px;
+  }
+
+  .play-btn {
+    width: 54px;
+    height: 54px;
+    font-size: 22px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -877,9 +993,11 @@ body {
 }
 
 .step-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px) scale(1.02);
   box-shadow: 0 30px 60px rgba(0,0,0,0.15);
 }
+
+
 
 /* STAGGER LIKE FIGMA */
 .step-1 {
@@ -928,6 +1046,42 @@ body {
 .arrow-2 {
   top: 340px;
   right: 350px;
+}
+
+/* ================= HOVER COLOR EFFECT ================= */
+
+/* DEFAULT TRANSITION */
+.step-card,
+.step-card h3,
+.step-card p,
+.step-card img {
+  transition: all 0.35s ease;
+}
+
+/* BLUE CARD */
+.step-card.blue:hover {
+  background: #2563eb;
+}
+
+/* GREEN CARD */
+.step-card.green:hover {
+  background: #16a34a;
+}
+
+/* ORANGE CARD */
+.step-card.orange:hover {
+  background: #f97316;
+}
+
+/* TEXT WHITE ON HOVER */
+.step-card:hover h3,
+.step-card:hover p {
+  color: #ffffff;
+}
+
+/* ICON WHITE ON HOVER */
+.step-card:hover img {
+  filter: brightness(0) invert(1);
 }
 
 
@@ -997,25 +1151,24 @@ body {
 .features-area {
   display: flex;
   flex-direction: column;
-  gap: 26px;
-  margin-bottom: 65px;
+  gap: 18px; /* was 26px */
+  margin-bottom: 55px;
 }
 
 /* EACH ROW */
 .feature-row {
   display: flex;
   justify-content: center;
-  gap: 22px;
-  flex-wrap: nowrap;
+  gap: 18px; /* was 22px */
 }
 
 /* PILL */
 .feature-pill {
-  display: flex;
+ display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 4px; /* icon-text gap */
 
-  padding: 14px 24px;
+  padding: 10px 18px; /* height kam */
   background: #fff;
   border-radius: 999px;
 
@@ -1024,17 +1177,21 @@ body {
   color: #222;
 
   box-shadow:
-    0 18px 35px rgba(0,0,0,0.12),
-    0 2px 6px rgba(0,0,0,0.05);
+    0 14px 30px rgba(0,0,0,0.10),
+    0 2px 6px rgba(0,0,0,0.04);
 
   white-space: nowrap;
 }
 
 /* ICON */
 .feature-pill img {
-  width: 56px;
-  height: 56px;
+  width: 34px;
+  height: 34px;
   object-fit: contain;
+}
+.feature-pill span {
+  line-height: 1;
+  display: block;
 }
 
 /* BUTTON */
@@ -1448,13 +1605,6 @@ body {
   }
 
 }
-
-
-
-
-
-
-
 
 
 /* RESPONSIVE */
@@ -2019,18 +2169,20 @@ body {
 
 
 
-/*About.html*/  /*About.html*/   /*About.html*/   /*About.html*/   /*About.html*/
+/*============================About.html================================*/
 
 
 /* HERO SECTION */
 .hero-section {
   padding: 60px 20px;
+  background-color: #fff;
 }
 
 .hero-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff;
   max-width: 1320px;
   margin: auto;
   gap: 40px;
@@ -2191,14 +2343,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 40px;
-  max-width: 1200px;
+  gap: 100px;
+  max-width: 1350px;
   margin: auto;
   flex-wrap: wrap; 
 }
 
 .about-image img {
-  max-width: 500px;
+  width: 500px;
+  height: 500px;
   padding: 20px;          /* ← padding in px */
   border-radius: 50px;
   object-fit: cover;
@@ -2207,18 +2360,18 @@ body {
 
 .about-text {
   flex: 1;
-  min-width: 280px; 
+  min-width: 300px; 
 }
 
 .about-text h2 {
-  font-size: 28px;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
 }
 
 .about-text p {
-  font-size: 16px;
+  font-size: 24px;
   line-height: 1.6;
   color: #444;
   margin-bottom: 15px;
@@ -2254,7 +2407,7 @@ body {
 }
 
 .vision-mission-section h2 {
-  font-size: 32px;
+  font-size: 2.5rem;
   width: 1500px;
   font-weight: bold;
   margin-bottom: 40px;
@@ -2275,27 +2428,27 @@ body {
   border-color: #000;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   max-width: 550px;
-  height: 420px;
+  height: 450px;
   text-align: center;
   flex: 1;
   min-width: 250px;
 }
 
 .card img {
-  width: 100px;
-  height: 200px;
-  object-fit: contain;
+  width: 300px;
+  height: 250px;
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
 .card h3 {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
 .card p {
-  font-size: 16px;
+  font-size: 18px;
   color: #555;
   line-height: 1.5;
 }
@@ -2599,7 +2752,7 @@ body {
 
 
 
-/*contact us*/       /*contact us*/    /*contact us*/      /*contact us*/        /*contact us*/
+/*==================================contact us====================================*/ 
 
 
 
@@ -2696,6 +2849,7 @@ body {
 .contact-form textarea {
   resize: none;
   height: 120px;
+  color: #C2C2C2;
 }
 
 .contact-form button {
@@ -2703,11 +2857,51 @@ body {
   padding: 14px;
   border-radius: 10px;
   border: none;
-  background: linear-gradient(90deg, #ff7a18, #ff9f43);
+  background: linear-gradient(90deg, #F97316, #F97316);
   color: #fff;
   font-size: 16px;
   cursor: pointer;
 }
+/* ICON CIRCLE */
+.icon-circle {
+  width: 44px;
+  height: 44px;
+  background: #F97316;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-circle i {
+  color: #fff;
+  font-size: 18px;
+}
+
+/* GAP FIX */
+.info-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* BUTTON HOVER */
+.contact-form button:hover {
+  background: linear-gradient(90deg, #ea580c, #f97316);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form {
+    margin-top: 40px;
+  }
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
@@ -2732,7 +2926,7 @@ body {
 
 
 
-/* ================= BLOG SECTION ================= */
+/* ================================= BLOG SECTION ============================= */
 
 .blogs-section {
   padding: 80px 20px;
@@ -2742,8 +2936,10 @@ body {
 .blogs-title {
   text-align: center;
   font-size: 26px;
-  font-weight: 600;
+  font-weight: 800;
+  font-size: 40px;
   margin-bottom: 40px;
+   font-family: "Montserrat", sans-serif;
 }
 
 .blogs-grid {
@@ -3142,6 +3338,10 @@ blockquote {
     height: 260px;
   }
 }
+
+
+
+
 
 
 

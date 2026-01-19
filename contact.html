@@ -16,18 +16,19 @@
 <body>
 
    <!-- NAVBAR -->
+   <!-- NAVBAR -->
 <header class="navbar">
   <img src="images/logo.png" alt="Logo" class="logo"/>
 
   <nav class="nav-links">
-    <a href="#">Home</a>
+    <a href="home.html">Home</a>
     <a href="about.html">About</a>
     <a href="blogs.html">Blogs</a>
 
     <!-- INSTITUTE DROPDOWN -->
     <div class="dropdown">
       <a href="#" class="dropdown-toggle">
-        Institute <img src="images/barrow.png" class="arrow">
+        Institute <i class="fa fa-angle-down"></i>
       </a>
 
       <div class="dropdown-menu">
@@ -44,8 +45,8 @@
 
   <!-- RIGHT SIDE -->
   <div class="nav-actions">
-    <a href="#" class="login-btn">Log in</a>
-    <button class="add-btn">+ Add Listing</button>
+    <a href="#login-popup" class="login-btn">Log in</a>
+    <button href="login-popupp" class="add-btn"><i class="fa-duotone fa fa-plus"></i>Add Listing</button>
   </div>
 </header>
 
@@ -60,7 +61,7 @@
 <section class="contact-section">
   <div class="contact-container">
 
-    <!-- LEFT SIDE -->
+    <!-- LEFT -->
     <div class="contact-left">
       <h1>Contact Us</h1>
       <p class="contact-desc">
@@ -72,28 +73,30 @@
 
       <div class="contact-info">
 
-        <!-- LOCATION -->
         <div class="info-item">
-          <img src="images/location.png" alt="Location" class="info-icon">
+          <div class="icon-circle">
+            <i class="fa fa-location-dot"></i>
+          </div>
           <div>
             <h4>Location</h4>
-            <p>Vasanta Vallabha Nagara, Bangalore, Karnataka 560062</p>
-            <p>Basistha Road, Guwahati 781028</p>
+            <p>Vasanta Vallabha Nagara, Bangalore,<br>Karnataka 560062</p>
           </div>
         </div>
 
-        <!-- EMAIL -->
         <div class="info-item">
-          <img src="images/email.png" alt="Email" class="info-icon">
+          <div class="icon-circle">
+            <i class="fa fa-envelope"></i>
+          </div>
           <div>
             <h4>Email Us</h4>
             <p>info@enwilo.com</p>
           </div>
         </div>
 
-        <!-- CALL -->
         <div class="info-item">
-          <img src="images/phone.png" alt="Call" class="info-icon">
+          <div class="icon-circle">
+            <i class="fa fa-phone"></i>
+          </div>
           <div>
             <h4>Call Us</h4>
             <p>+91 939 594 0680</p>
@@ -104,23 +107,25 @@
     </div>
 
     <!-- RIGHT FORM -->
-    <div class="contact-form">
-      <form>
-        <label>Name</label>
-        <input type="text" placeholder="Enter Your Name">
+    <form class="contact-form" id="contactForm">
+      <label>Name</label>
+      <input type="text" placeholder="Enter Your Name">
 
-        <label>Email</label>
-        <input type="email" placeholder="Enter Your Email">
 
-        <label>Subject</label>
-        <input type="text" placeholder="Enter Your Subject">
+      <label>Email</label>
+      <input type="text" placeholder="Enter Your Email">
 
-        <label>Message</label>
-        <textarea placeholder="Enter Your Message"></textarea>
 
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
+      <label>Subject</label>
+      <input type="text" placeholder="Enter Your Subject">
+
+      
+      <label>Message</label>
+      <textarea placeholder="Enter Your Message"></textarea>
+
+
+      <button type="submit">Send Message</button>
+    </form>
 
   </div>
 </section>
@@ -235,6 +240,7 @@
   </div>
 </footer>
 
-    
+
+<script src="script.js"></script>    
 </body>
 </html>
