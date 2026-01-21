@@ -216,3 +216,47 @@ togglePassword.addEventListener('click', () => {
 
 
 
+
+
+
+
+//this is first login page 
+  function togglePassword() {
+    const passwordInput = document.getElementById("password");
+
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+    } else {
+      passwordInput.type = "password";
+    }
+  }
+
+
+// this secong login page
+  function validateForm() {
+  const fname = document.getElementById("fname").value.trim();
+  const lname = document.getElementById("lname").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirmPassword").value;
+  const terms = document.getElementById("terms").checked;
+
+  if (!fname || !lname || !phone || !email || !password || !confirmPassword) {
+    alert("Please fill all fields");
+    return false;
+  }
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match");
+    return false;
+  }
+
+  if (!terms) {
+    alert("Please accept Terms & Conditions");
+    return false;
+  }
+
+  alert("Signup successful!");
+  return true;
+}

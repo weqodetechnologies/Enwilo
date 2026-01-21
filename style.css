@@ -16,6 +16,8 @@ body {
 
 /* NAVBAR */
 .navbar {
+  position: relative;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -130,7 +132,7 @@ body {
   font-size: 17px;
   font-weight: 500;
   cursor: pointer;
-  padding-top: 14px;
+  padding-top: 11px;
 
 }
 
@@ -219,127 +221,301 @@ body {
 
 
 
+/*==================================login page=========================================*/
 
 
+body {
+  background: #f8fafc;
+  padding-top: -10px;
+}
 
-
-
-/* ================= LOGIN POPUP ================= */
-
-.login-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
+.login-wrapper {
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.3s;
-  z-index: 9999;
 }
 
-.login-overlay.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-
-/* SHOW POPUP */
-.login-overlay:target {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.login-box {
+.login-card {
   background: #fff;
-  width: 420px;
-  padding: 32px;
-  border-radius: 20px;
-  position: relative;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.2);
-}
-
-.close-login {
-  position: absolute;
-  top: 14px;
-  right: 18px;
-  font-size: 24px;
-  text-decoration: none;
-  color: #333;
-}
-
-.login-box h2 {
-  text-align: center;
-  font-size: 22px;
-}
-
-.login-subtitle {
-  text-align: center;
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 25px;
-}
-
-.login-box label {
-  font-size: 14px;
-  display: block;
-  margin-bottom: 6px;
-}
-
-.login-box input {
-  width: 100%;
-  height: 45px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  padding: 0 14px;
-  margin-bottom: 16px;
-}
-
-.forgot-link {
-  display: block;
-  text-align: right;
-  font-size: 13px;
-  color: #2563eb;
-  margin-bottom: 22px;
-  text-decoration: none;
-}
-
-.login-btn-main {
-  width: 100%;
-  height: 48px;
-  background: #1e40af;
-  color: #fff;
-  border: none;
+  width: 520px;
+  height: 470px;
+  padding: 30px;
   border-radius: 12px;
-  font-size: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.login-card h2 {
+  text-align: center;
+  margin-bottom: 5px;
+  color: #0f172a;
+}
+
+.sub-text {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #0f172a;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.password-box {
+  position: relative;
+}
+
+.password-box .lock {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #64748b;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.actions button {
+  background: #0ea5e9;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 14px;
+}
+
+.actions button:hover {
+  background: #0284c7;
+}
+
+.actions a {
+  font-size: 13px;
+  color: #0ea5e9;
+  text-decoration: none;
 }
 
 .signup-text {
   text-align: center;
-  font-size: 14px;
-  margin-top: 18px;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #475569;
 }
 
 .signup-text a {
+  color: #0ea5e9;
+  text-decoration: none;
+}
+/* ===================== */
+/* RESPONSIVE DESIGN */
+/* ===================== */
+
+/* Tablets & small laptops */
+@media (max-width: 768px) {
+  .login-card {
+    width: 90%;
+    max-width: 400px;
+    padding: 25px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .login-card {
+    width: 95%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .login-card h2 {
+    font-size: 20px;
+  }
+
+  .sub-text {
+    font-size: 13px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+
+  .actions a {
+    text-align: center;
+  }
+}
+
+/*=================================login11==============================================*/
+
+body {
+  background: #f3f6ff;
+}
+
+.signup-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-card {
+  background: #fff;
+  width: 480px;
+  height: 710px;
+  padding: 35px;
+  border-radius: 16px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.signup-card h2 {
+  text-align: center;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.sub-text {
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #111827;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.checkbox a {
   color: #2563eb;
   text-decoration: none;
 }
-.login-box {
-  animation: popupZoom 0.3s ease;
+
+.btn {
+  display: block;
+  width: 300px;          /* fixed width like image */
+  max-width: 100%;       /* safety for small screens */
+  margin: 0 auto;        /* center horizontally */
+  padding: 13px 0;
+  border-radius: 10px;
+  border: none;
+  background: #4f66ff;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
 }
 
-@keyframes popupZoom {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
+
+.btn:hover {
+  background: #3f51e5;
+}
+
+.login-text {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 15px;
+  color: #374151;
+}
+
+.login-text a {
+  color: #2563eb;
+  text-decoration: none;
+}
+.signup-btn {
+  width: 410px !important;   /* force width */
+  margin: 0 auto !important; /* center */
+  display: block !important;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .signup-card {
+    width: 95%;
+    padding: 25px;
   }
-  to {
-    transform: scale(1);
-    opacity: 1;
+
+  .row {
+    flex-direction: column;
   }
 }
+
+/*=============================================forgot password=============================================*/
+
+
+
+
+
+
 
 
 
