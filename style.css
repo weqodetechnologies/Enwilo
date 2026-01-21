@@ -239,6 +239,12 @@ body {
   z-index: 9999;
 }
 
+.login-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
 /* SHOW POPUP */
 .login-overlay:target {
   opacity: 1;
@@ -319,6 +325,20 @@ body {
 .signup-text a {
   color: #2563eb;
   text-decoration: none;
+}
+.login-box {
+  animation: popupZoom 0.3s ease;
+}
+
+@keyframes popupZoom {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 
@@ -847,7 +867,7 @@ body {
 .video-wrapper {
   position: relative;
   width: 1300px;
-  height: 100px;
+  height: 80px;
 
   background: #bdbdbd;        /* grey background */
   border-radius: 28px;        /* same as figma */
@@ -1508,6 +1528,12 @@ body {
     font-size: 28px;
   }
 }
+
+
+
+
+
+
 
 
 
