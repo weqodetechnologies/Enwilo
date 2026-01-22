@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Institutes | Enwilo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- GLOBAL STYLES -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- INSTITUTE PAGE ONLY STYLES -->
+    <link rel="stylesheet" href="Css/details.css" />
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Nunito:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR (UNCHANGED - YOUR CODE) ================= -->
+    <header class="navbar">
+      <img src="images/logo.png" alt="Logo" class="logo" />
+
+      <nav class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blogs.html">Blogs</a>
+
+        <div class="dropdown">
+          <a href="#" class="dropdown-toggle">
+            Institute <i class="fa fa-angle-down"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#"><img src="images/kids.png" /> Kids School</a>
+            <a href="#"><img src="images/primary.png" /> Primary Schools</a>
+            <a href="#"><img src="images/secondary.png" /> Secondary Schools</a>
+            <a href="#"><img src="images/college.png" /> Colleges</a>
+            <a href="#"><img src="images/coaching.png" /> Coaching Institute</a>
+          </div>
+        </div>
+
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="login-btn">Log in</a>
+        <button class="add-btn"><i class="fa fa-plus"></i> Add Listing</button>
+      </div>
+    </header>
+
+    <!-- Main section  -->
+    <section class="details-page">
+      <!-- ===== HEADER ===== -->
+      <div class="details-header">
+        <h1 id="detailTitle">Kidzee Duliajan - Kids School in Duliajan</h1>
+
+        <div class="details-sub">
+          <span class="loc">
+            <i class="fa fa-location-dot"></i>
+            <span id="detailLocation">TD Colony, Duliajan</span>
+          </span>
+
+          <span class="rating">
+            ⭐ <span id="detailReviewsCount">20</span> Reviews
+          </span>
+
+          <span class="verified">Verified Institute</span>
+        </div>
+      </div>
+
+      <!-- ===== GALLERY ===== -->
+      <div class="details-gallery" id="detailsGallery">
+        <!-- images from JS -->
+      </div>
+
+      <!-- ===== INFO CARD ===== -->
+      <div class="details-info-card">
+        <div class="info-left">
+          <div class="info-row">
+            <i class="fa fa-location-dot"></i>
+            <span id="detailFullAddress"></span>
+          </div>
+          <div class="info-row">
+            <i class="fa fa-phone"></i>
+            <span id="detailPhone">8638233536</span>
+          </div>
+          <div class="info-row">
+            <i class="fa fa-graduation-cap"></i>
+            <span>Scholarship: No</span>
+          </div>
+
+          <!-- Review teaser -->
+          <div class="rate-row">
+            <img src="images/user.png" />
+            <div>
+              <p>Rate Your Review</p>
+              <div class="review-stars" id="reviewStars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-center">
+          <h4>Class Timings</h4>
+          <div class="timings">
+            <span>Mon 8 AM - 3 PM</span>
+            <span>Tue 8 AM - 3 PM</span>
+            <span>Wed 8 AM - 3 PM</span>
+            <span>Thu 8 AM - 3 PM</span>
+            <span>Fri 8 AM - 3 PM</span>
+            <span>Sat 8 AM - 3 PM</span>
+            <span class="off">Sun Off</span>
+          </div>
+        </div>
+
+        <div class="info-right">
+          <button class="call-btn">Call</button>
+          <button class="enquiry-btn">Enquiry</button>
+        </div>
+      </div>
+
+      <!-- ===== REVIEW FORM (HIDDEN) ===== -->
+      <div class="review-form-box" id="reviewForm">
+        <h3>Publish Your Review</h3>
+
+        <div class="form-grid">
+          <input placeholder="Your Name" />
+          <input placeholder="Phone Number" />
+          <input placeholder="Email" />
+          <input type="file" />
+        </div>
+
+        <textarea placeholder="Enter Your Comments"></textarea>
+
+        <button class="publish-btn">Publish Review</button>
+      </div>
+
+      <!-- ===== ABOUT ===== -->
+      <div class="details-about">
+        <h2 id="aboutTitle">About Kidzee Duliajan</h2>
+        <p id="aboutText">Loading...</p>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- LEFT -->
+        <div class="footer-col footer-brand">
+          <!-- LOGO (YAHAN LOGO IMAGE) -->
+          <img src="images/logo.png" class="footer-logo" alt="Logo" />
+
+          <p class="footer-desc">
+            Enwilo helps parents and students discover top schools and coaching
+            institutes in Guwahati. We also offer intuitive School Management
+            Software for admissions, attendance and communication.
+          </p>
+
+          <h4 class="footer-title"><b>Get In Touch</b></h4>
+
+          <!-- EMAIL BOX -->
+          <div class="email-box">
+            <input type="email" placeholder="Enter Your Email" />
+            <!-- SEND ICON YAHAN DALNA -->
+            <button>
+              <img src="images/send-icon.png" alt="Send Icon" />
+            </button>
+          </div>
+
+          <h5 class="footer-title"><b>Follow Us</b></h5>
+
+          <!-- SOCIAL ICONS (YAHAN AAP ICONS CHANGE KARNA) -->
+          <div class="social-icons">
+            <i class="fa fa-location-dot"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa fa-envelope"></i>
+          </div>
+        </div>
+
+        <!-- CENTER -->
+        <div class="footer-col">
+          <h3 class="footer-heading"><b>Quick Links</b></h3>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Institute</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="footer-col">
+          <h3 class="footer-heading"><b>Contact Information</b></h3>
+
+          <!-- LOCATION -->
+          <div class="contact-row">
+            <!-- LOCATION ICON YAHAN -->
+            <div class="icon-circle">
+              <i class="fa fa-location-dot"></i>
+            </div>
+
+            <div>
+              <strong>Location</strong>
+              <p>Vasanta Vallabha Nagara, Bangalore,<br />Karnataka 560062</p>
+              <p>Basistha Road, Guwahati 781028</p>
+            </div>
+          </div>
+
+          <!-- EMAIL -->
+          <div class="contact-row">
+            <!-- EMAIL ICON YAHAN -->
+            <div class="icon-circle">
+              <i class="fa fa-envelope"></i>
+            </div>
+            <div>
+              <strong>Email Us</strong>
+              <p>info@enwilo.com</p>
+            </div>
+          </div>
+
+          <!-- PHONE -->
+          <div class="contact-row">
+            <!-- PHONE ICON YAHAN -->
+            <div class="icon-circle">
+              <i class="fa fa-phone"></i>
+            </div>
+            <div>
+              <strong>Call Us</strong>
+              <p>+91 939 594 0680</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/details.js"></script>
+  </body>
+</html>
