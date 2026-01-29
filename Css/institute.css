@@ -1,0 +1,690 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* 2. Body styles */
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  font-family: "Nunito", sans-serif;
+}
+
+
+/* NAVBAR */
+.navbar {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 95px;
+  padding-top: 30px;
+}
+
+.logo {
+  width: 150px;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* LINKS */
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-links img {
+  width: 25px;
+}
+
+/* ===================== */
+/* INSTITUTE DROPDOWN */
+/* ===================== */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle img{
+     left: 76px;
+}
+.dropdown-toggle {
+  background: none;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #333;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background: #fff;
+  width: 240px;
+  border-radius: 14px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  z-index: 999; 
+}
+/* Show when active */
+.dropdown-menu.show {
+  display: flex;
+}
+
+
+/* Dropdown items */
+.dropdown-menu a {
+  margin: 0;
+  padding: 10px 14px;
+  font-size: 15px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-radius: 10px;
+}
+
+/* Dropdown item icons */
+.dropdown-menu a img {
+  width: 26px;
+  height: 26px;
+}
+
+/* Hover effect */
+.dropdown-menu a:hover {
+  background: #f4f6fb;
+}
+
+/* ===================== */
+
+.nav-actions {
+  display: flex;
+  gap: 28px;
+}
+
+.add-btn {
+  background: #1e40af;
+  color: #fff;
+  border: none;
+  width: 150px;
+  height: 50px;
+  font-size: 17px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+
+
+/* LOGIN */
+.login-btn {
+  text-decoration: none;
+  color: #111;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  padding-top: 14px;
+
+}
+
+
+/* ===================== */
+/* RESPONSIVE NAVBAR */
+/* ===================== */
+
+/* TABLET */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 20px 40px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+
+  .add-btn {
+    width: 135px;
+    height: 46px;
+    font-size: 16px;
+  }
+
+  .dropdown-menu {
+    width: 220px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
+
+  .nav-links a {
+    margin: 0 8px;
+    font-size: 15px;
+  }
+
+  .nav-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    width: 100%;
+    padding: 0;
+    margin-top: 8px;
+    border-radius: 0;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: none;
+  }
+
+  /* Mobile open on click simulation */
+  .dropdown:focus-within .dropdown-menu {
+    display: flex;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .logo {
+    width: 120px;
+  }
+
+  .add-btn {
+    width: 100%;
+    height: 48px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= INSTITUTE PAGE ================= */
+
+.institute-page {
+    padding: 40px 20px 80px;
+    background: #f6f7fb;
+}
+
+/* SEARCH BAR */
+
+.institute-search-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.search-pill {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 50px;
+    padding: 10px 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.search-field {
+    display: flex;
+    flex-direction: column;
+    padding: 0 14px;
+}
+
+.search-field label {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.search-field input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    width: 180px;
+}
+
+.divider {
+    width: 1px;
+    height: 36px;
+    background: #ddd;
+}
+
+.search-btn {
+    background: #ff7a00;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* CATEGORY PILLS */
+
+/* CATEGORY PILLS */
+
+
+
+/* Base pill */
+
+.pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 20px;
+    border-radius: 999px;
+
+    background: #ffffff;
+    border: 1px solid #eee;
+
+    cursor: pointer;
+    font-weight: 550;
+    font-size: 14px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.25s ease;
+
+    color: #222;
+}
+
+.category-pills {
+    display: grid;
+    grid-template-columns: repeat(3, 240px);
+    justify-content: center;
+    gap: 20px 34px;
+    margin-bottom: 40px;
+}
+
+
+/* Move only 4th and 5th to second row center */
+
+.category-pills .pill:nth-child(4) {
+    grid-column: 1;
+    justify-self: center;
+}
+
+.category-pills .pill:nth-child(5) {
+    grid-column: 2;
+    justify-self: center;
+}
+
+/* Icon inside pill */
+
+.pill img,
+.pill i {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+}
+
+/* Hover effect (FLOATING LOOK) */
+
+.pill:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 35px rgba(13, 13, 13, 0.18);
+    border-color: #2b4eff;
+    color: #2b4eff;
+    background: #f4f6ff;
+}
+
+/* Active pill */
+
+.pill.active {
+    background: #eef2ff;
+    border-color: #2b4eff;
+    color: #2b4eff;
+    box-shadow: 0 14px 35px rgba(13, 13, 13, 0.20);
+}
+
+/* Filter special */
+
+.filter-pill {
+    padding: 12px 22px;
+}
+
+/* GRID */
+
+.institute-grid {
+    max-width: 1300px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 28px;
+}
+
+/* CARD */
+
+.institute-card {
+    background: white;
+    border-radius: 22px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    transition: all .3s ease;
+}
+
+.institute-card:hover {
+    transform: translateY(-8px);
+}
+
+.institute-card img {
+    width: 100%;
+  padding: 10px;
+  border-radius: 24px;
+  height: 170px;
+  object-fit: cover;
+}
+
+.card-body {
+    padding: 16px;
+}
+
+.star-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 2px;
+}
+
+.card-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* .rating {
+    color: #FFE500;
+    font-size: 16px;
+    margin-bottom: 6px;
+} */
+
+.rating i {
+    color: #FFE500;
+    font-size: 16px;
+    margin-right: 2px;
+}
+
+.reviews {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    color: #777;
+}
+
+.card-body h3 {
+    font-size: 17px;
+    margin-bottom: 6px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.card-body p {
+    font-size: 13px;
+    color: #666;
+}
+
+.tag {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid #ddd;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .search-pill {
+        border-radius: 20px;
+    }
+
+    .search-field input {
+        width: 100%;
+    }
+
+    .divider {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .category-pills {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .category-pills .pill {
+        grid-column: auto !important;
+        justify-self: center !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* footer*/
+
+/* .footer {
+  background: #111;         
+  padding: 300px 30px;
+  font-family: Arial, sans-serif;
+} */
+
+.footer {
+  background: #f7f8fa;
+ 
+}
+
+.footer-container {
+
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 80px;
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+  border-radius: 24px;
+  padding: 70px 80px;
+}
+
+/* LEFT */
+.footer-logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-desc {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.footer-title h4 {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+
+/* EMAIL */
+.email-box {
+  display: flex;
+  width: 260px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.email-box input {
+  flex: 1;
+  border: none;
+  padding: 0 18px;
+  font-size: 14px;
+  outline: none;
+}
+
+.email-box button {
+  width: 46px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.email-box img {
+  width: 34px;
+  
+}
+
+/* SOCIAL */
+.social-icons {
+  display: flex;
+  gap: 14px;
+}
+
+/* LEFT SOCIAL ICONS - ORANGE CIRCLE */
+.social-icons i {
+  width: 40px;
+  height: 40px;
+  background: #F97316;      /* same orange */
+  color: #fff;              /* icon white */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  background: #F97316;   /* FIGMA ORANGE */
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-circle img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1); /* icon white */
+}
+
+
+
+
+/* CENTER */
+.footer-heading {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 14px;
+}
+
+.footer-links a {
+  font-size: 14px;
+  color: #777;
+  text-decoration: none;
+}
+
+/* RIGHT */
+.contact-row {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.contact-icon {
+  width: 36px;
+  height: 36px;
+}
+
+.contact-row strong {
+  font-size: 14px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.contact-row p {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 50px 30px;
+  }
+}
