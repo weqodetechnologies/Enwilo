@@ -261,3 +261,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("instituteToggle");
+  const menu = document.getElementById("instituteMenu");
+
+  if (!toggleBtn || !menu) return;
+
+  // Toggle dropdown
+  toggleBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    menu.classList.toggle("show");
+  });
+
+  // Link click → allow navigation + close menu
+  menu.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => {
+      menu.classList.remove("show"); 
+      // yaha preventDefault mat lagana, nahi toh page open nahi hoga
+    });
+  });
+
+  // Outside click → close
+  document.addEventListener("click", () => {
+    menu.classList.remove("show");
+  });
+});
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("instituteToggle");
+  const menu = document.getElementById("instituteMenu");
+
+  if (!toggleBtn || !menu) return;
+
+  toggleBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    menu.classList.toggle("show");
+  });
+
+  document.addEventListener("click", () => {
+    menu.classList.remove("show");
+  });
+});
+
