@@ -14,7 +14,7 @@
     return starsHTML;
     }
 
-    // ✅ DATA: main + sub both store karo
+    // DATA: main + sub both store karo
     const coachingData = [
     // SCHOOL - Primary/Middle/High etc
     {
@@ -211,3 +211,17 @@
     showSubChips(selectedMain);
     resetSubToAll(selectedMain);
     renderCards();
+
+
+
+
+
+    // footer active link 
+const links = document.querySelectorAll(".footer-links a");
+const currentPage = window.location.pathname;
+
+links.forEach(link => {
+  if (currentPage.includes(link.getAttribute("href"))) {
+    link.classList.add("active");
+  }
+});

@@ -68,8 +68,10 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 6px;
-  color: #333;
+  gap: 0px;
+  color: #555; 
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .dropdown-menu {
@@ -138,14 +140,28 @@ body {
 /* LOGIN */
 .login-btn {
   text-decoration: none;
-  color: #111;
+  color: #555;
   font-size: 17px;
   font-weight: 500;
   cursor: pointer;
-  padding-top: 14px;
+  padding-top: 12px;
 
 }
+/* NAV LINKS */
+.nav-links a,
+.dropdown-toggle,
+.login-btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.25s;
+}
 
+/* hover effect */
+.nav-links a:hover,
+.dropdown-toggle:hover,
+.login-btn:hover {
+  color: #000;
+}
 
 /* ===================== */
 /* RESPONSIVE NAVBAR */
@@ -791,7 +807,7 @@ body {
 }
 
 .footer-title h4 {
- font-size: 18px;
+  font-size: 24px;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -801,31 +817,47 @@ body {
 .email-box {
   display: flex;
   width: 260px;
-  height: 40px;
+  height: 42px;
   border: 1px solid #ddd;
   border-radius: 30px;
   overflow: hidden;
-  margin-bottom: 25px;
+  background: #fff;
+  padding: 4px;
 }
 
 .email-box input {
   flex: 1;
   border: none;
-  padding: 0 18px;
+  padding: 0 14px;
   font-size: 14px;
   outline: none;
+  background: transparent;
 }
 
-.email-box button {
-  width: 46px;
-  background: transparent;
+/* REMOVE BLACK BORDER ON CLICK */
+.email-box input:focus {
+  outline: none;
   border: none;
+  box-shadow: none;
+}
+
+
+.email-box button {
+  width: 60px;
+  height: 30px;
+  background: #1e40af; /* blue */
+  border: none;
+  border-radius: 20px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .email-box img {
-  width: 34px;
-  
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1); /* icon white */
 }
 
 /* SOCIAL */
@@ -915,6 +947,24 @@ body {
   color: #777;
   line-height: 1.6;
 }
+.footer-links a {
+  font-size: 14px;
+  color: #777;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+/* hover */
+.footer-links a:hover {
+  color: #000;
+}
+
+/* active page */
+.footer-links a.active {
+  color: #000;
+  font-weight: 600;
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 992px) {

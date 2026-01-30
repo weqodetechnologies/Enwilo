@@ -587,4 +587,8 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "../html/detailsinstitute.html";
     }
   });
-});
+}); 
+
+
+
+

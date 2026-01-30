@@ -66,8 +66,10 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 6px;
-  color: #333;
+  gap: 0px;
+  color: #555; 
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .dropdown-menu {
@@ -133,12 +135,28 @@ body {
 /* LOGIN */
 .login-btn {
   text-decoration: none;
-  color: #111;
-  font-size: 17px;
+  color: #555;
+  font-size: 18px;
   font-weight: 500;
   cursor: pointer;
-  padding-top: 14px;
+  padding-top: 12px;
 }
+/* NAV LINKS */
+.nav-links a,
+.dropdown-toggle,
+.login-btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.25s;
+}
+
+/* hover effect */
+.nav-links a:hover,
+.dropdown-toggle:hover,
+.login-btn:hover {
+  color: #000;
+}
+
 
 /* ===================== */
 /* RESPONSIVE NAVBAR */
@@ -332,7 +350,7 @@ body {
 }
 .value-icon {
   font-size: 14px;
-  margin-left: 10px;
+  
 }
 
 .arrow {
@@ -1287,6 +1305,7 @@ body {
   margin: auto;
   background: #fff;
   text-align: center;
+  padding-top: 10px;
 }
 
 /* TITLE */
@@ -1309,6 +1328,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   gap: 24px;
+  
 }
 
 /* BASE CHIP */
@@ -1337,8 +1357,7 @@ body {
 /* NORMAL WHITE (SECOND LEVEL) */
 .chips-row:not(.secondary) .chip:not(.active) {
   padding: 12px 30px;
-  font-size: 14px;
-  
+  font-size: 14px; 
 }
 
 /* GRAY CHIPS (SMALLEST) */
@@ -1356,6 +1375,24 @@ body {
 .chip:not(.gray):hover {
   transform: translateY(-2px);
 }
+/* SUB CHIPS STYLE (gray + small) */
+.chips-row.secondary .chip,
+.chips-row.secondary1 .chip {
+  background: #ededed;
+  border-color: #ededed;
+  color: #333;
+  font-size: 14px;
+  padding: 10px 22px;
+  box-shadow: none;
+}
+
+/* gap between both rows */
+.chips-row.secondary1 {
+  margin-top: 18px;
+  height: 5px;
+
+}
+
 
 @media (max-width: 768px) {
   .chip {
@@ -1747,6 +1784,9 @@ body {
   }
 }
 
+
+
+
 /* footer*/
 
 /* .footer {
@@ -1757,9 +1797,11 @@ body {
 
 .footer {
   background: #f7f8fa;
+ 
 }
 
 .footer-container {
+
   margin: auto;
   display: grid;
   grid-template-columns: 2fr 1fr 1.5fr;
@@ -1780,42 +1822,62 @@ body {
   font-size: 14px;
   color: #777;
   line-height: 1.8;
-  margin-bottom: 26px;
+  margin-bottom: 28px;
 }
 
 .footer-title h4 {
-  font-size: 18px;
+  font-size: 24px;
   font-family: "Montserrat", sans-serif;
 }
+
+
 
 /* EMAIL */
 .email-box {
   display: flex;
   width: 260px;
-  height: 40px;
+  height: 42px;
   border: 1px solid #ddd;
   border-radius: 30px;
   overflow: hidden;
-  margin-bottom: 25px;
+  background: #fff;
+  padding: 4px;
 }
+
 
 .email-box input {
   flex: 1;
   border: none;
-  padding: 0 18px;
+  padding: 0 14px;
   font-size: 14px;
   outline: none;
+  background: transparent;
 }
 
-.email-box button {
-  width: 46px;
-  background: transparent;
+/* REMOVE BLACK BORDER ON CLICK */
+.email-box input:focus {
+  outline: none;
   border: none;
+  box-shadow: none;
+}
+
+
+.email-box button {
+  width: 60px;
+  height: 30px;
+  background: #1e40af; /* blue */
+  border: none;
+  border-radius: 20px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .email-box img {
-  width: 34px;
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1); /* icon white */
 }
 
 /* SOCIAL */
@@ -1828,8 +1890,8 @@ body {
 .social-icons i {
   width: 40px;
   height: 40px;
-  background: #f97316; /* same orange */
-  color: #fff; /* icon white */
+  background: #F97316;      /* same orange */
+  color: #fff;              /* icon white */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1838,10 +1900,11 @@ body {
   cursor: pointer;
 }
 
+
 .icon-circle {
   width: 40px;
   height: 40px;
-  background: #f97316; /* FIGMA ORANGE */
+  background: #F97316;   /* FIGMA ORANGE */
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -1855,6 +1918,9 @@ body {
   height: 18px;
   filter: brightness(0) invert(1); /* icon white */
 }
+
+
+
 
 /* CENTER */
 .footer-heading {
@@ -1901,6 +1967,24 @@ body {
   color: #777;
   line-height: 1.6;
 }
+.footer-links a {
+  font-size: 14px;
+  color: #777;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+/* hover */
+.footer-links a:hover {
+  color: #000;
+}
+
+/* active page */
+.footer-links a.active {
+  color: #000;
+  font-weight: 600;
+}
+
 
 /* RESPONSIVE */
 @media (max-width: 992px) {
