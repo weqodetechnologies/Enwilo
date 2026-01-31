@@ -216,6 +216,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="institute-rating-row">
               <div class="stars">${generateStars(inst.rating)}</div>
               <div class="review-count">
+              <i class="fa fa-user"></i>
                 <span>${inst.reviews ?? 0}</span>
               </div>
             </div>
@@ -286,7 +287,6 @@ document.addEventListener("DOMContentLoaded", () => {
     menu.classList.remove("show");
   });
 });
-
 
 
 
