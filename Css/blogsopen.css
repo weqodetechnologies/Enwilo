@@ -145,8 +145,8 @@ body {
   font-weight: 500;
   cursor: pointer;
   padding-top: 12px;
-}
 
+}
 /* NAV LINKS */
 .nav-links a,
 .dropdown-toggle,
@@ -162,6 +162,7 @@ body {
 .login-btn:hover {
   color: #000;
 }
+
 /* ===================== */
 /* RESPONSIVE NAVBAR */
 /* ===================== */
@@ -254,268 +255,238 @@ body {
 
 
 
-/* ================= INSTITUTE PAGE ================= */
 
-.institute-page {
-    padding: 40px 20px 80px;
-    background: #f6f7fb;
+
+/* ================= BLOG DETAIL LAYOUT ================= */
+.blog-detail-page {
+  padding: 80px 20px;
+  background: #f5f5f5;
 }
 
-/* SEARCH BAR */
-
-.institute-search-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 25px;
+.blog-detail-container {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2.3fr 1fr;
+  gap: 40px;
 }
 
-.search-pill {
-    display: flex;
-    align-items: center;
-    background: white;
-    border-radius: 50px;
-    padding: 10px 12px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-    gap: 14px;
-    flex-wrap: wrap;
+/* ================= MAIN BLOG CARD ================= */
+.blog-main {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+
+  /* IMPORTANT */
+  height: 1090px; /* 👈 same height as image design */
+  display: flex;
+  flex-direction: column;
 }
 
-.search-field {
-    display: flex;
-    flex-direction: column;
-    padding: 0 14px;
+/* IMAGE */
+.blog-hero {
+  width: 850px;
+  padding-left: 25px;
+  padding-top: 20px;
+  height: 500px;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
-.search-field label {
-    font-size: 12px;
-    font-weight: 700;
+/* DATE */
+.blog-date {
+  padding: 16px 36px 10px;
+  font-size: 14px;
+  color: #888;
+  flex-shrink: 0;
 }
 
-.search-field input {
-    border: none;
-    outline: none;
-    font-size: 14px;
-    width: 180px;
+/* ================= SCROLLABLE CONTENT ================= */
+.blog-scroll {
+  padding: 10px 36px 36px;
+
+  /* REAL SCROLL FIX */
+  overflow-y: auto;
+  flex: 1;                 /* 👈 this is the KEY */
 }
 
-.divider {
-    width: 1px;
-    height: 36px;
-    background: #ddd;
+/* HEADINGS */
+.blog-scroll h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  line-height: 1.35;
 }
 
-.search-btn {
-    background: #ff7a00;
-    color: white;
-    border: none;
-    padding: 12px 22px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: 600;
+.blog-scroll h3 {
+  font-size: 20px;
+  margin: 24px 0 12px;
+  font-weight: 600;
 }
 
-/* CATEGORY PILLS */
-
-/* CATEGORY PILLS */
-
-
-
-/* Base pill */
-
-.pill {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    padding: 12px 20px;
-    border-radius: 999px;
-
-    background: #ffffff;
-    border: 1px solid #eee;
-
-    cursor: pointer;
-    font-weight: 550;
-    font-size: 14px;
-
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    transition: all 0.25s ease;
-
-    color: #222;
+/* TEXT */
+.blog-scroll p {
+  font-size: 16px;
+  line-height: 1.75;
+  margin-bottom: 18px;
+  color: #444;
 }
 
-.category-pills {
-    display: grid;
-    grid-template-columns: repeat(3, 240px);
-    justify-content: center;
-    gap: 20px 34px;
-    margin-bottom: 40px;
+/* LIST */
+.filled-circle-list {
+  padding-left: 22px;
+  margin-bottom: 20px;
 }
 
-
-/* Move only 4th and 5th to second row center */
-
-.category-pills .pill:nth-child(4) {
-    grid-column: 1;
-    justify-self: center;
+.filled-circle-list li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  line-height: 1.6;
 }
 
-.category-pills .pill:nth-child(5) {
-    grid-column: 2;
-    justify-self: center;
+/* SCROLLBAR (CLEAN & FIGMA-LIKE) */
+.blog-scroll::-webkit-scrollbar {
+  width: 6px;
 }
 
-/* Icon inside pill */
-
-.pill img,
-.pill i {
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
+.blog-scroll::-webkit-scrollbar-thumb {
+  background: #d1d1d1;
+  border-radius: 10px;
 }
 
-/* Hover effect (FLOATING LOOK) */
-
-.pill:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 14px 35px rgba(13, 13, 13, 0.18);
-    border-color: #2b4eff;
-    color: #2b4eff;
-    background: #f4f6ff;
+/* ================= SIDEBAR ================= */
+.blog-sidebar {
+  position: sticky;
+  top: 100px;
 }
 
-/* Active pill */
-
-.pill.active {
-    background: #eef2ff;
-    border-color: #2b4eff;
-    color: #2b4eff;
-    box-shadow: 0 14px 35px rgba(13, 13, 13, 0.20);
+/* SIDEBAR TITLE */
+.sidebar-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
-/* Filter special */
-
-.filter-pill {
-    padding: 12px 22px;
+/* RELATED POST CARD */
+.related-post-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
-/* GRID */
-
-.institute-grid {
-    max-width: 1300px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 28px;
-}
-
-/* CARD */
-
-.institute-card {
-    background: white;
-    border-radius: 22px;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-    transition: all .3s ease;
-}
-
-.institute-card:hover {
-    transform: translateY(-8px);
-}
-
-.institute-card img {
-    width: 100%;
-  padding: 10px;
-  border-radius: 24px;
-  height: 170px;
+.related-post-img img {
+  width: 370px;
+  height: 200px;
+  border-radius: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
   object-fit: cover;
 }
 
-.card-body {
-    padding: 16px;
+.related-post-info {
+  padding: 16px;
 }
 
-.star-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 2px;
-}
-
-.card-top-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-/* .rating {
-    color: #FFE500;
-    font-size: 16px;
-    margin-bottom: 6px;
-} */
-
-.rating i {
-    color: #FFE500;
-    font-size: 16px;
-    margin-right: 2px;
-}
-
-.reviews {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 13px;
-    color: #777;
-}
-
-.card-body h3 {
-    font-size: 17px;
-    margin-bottom: 6px;
-    font-family: "Montserrat", sans-serif;
-}
-
-.card-body p {
-    font-size: 13px;
-    color: #666;
-}
-
+/* TAG */
 .tag {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 5px 14px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-    border: 1px solid #ddd;
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+  color: #fff;
 }
 
-/* RESPONSIVE */
+.tag-orange { background: #F97316; }
+.tag-blue { background: #F97316; }
 
-@media (max-width: 768px) {
-    .search-pill {
-        border-radius: 20px;
-    }
-
-    .search-field input {
-        width: 100%;
-    }
-
-    .divider {
-        display: none;
-    }
+/* META */
+.meta {
+  font-size: 13px;
+  color: #777;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-@media (max-width: 768px) {
-    .category-pills {
-        grid-template-columns: repeat(2, auto);
-    }
-
-    .category-pills .pill {
-        grid-column: auto !important;
-        justify-self: center !important;
-    }
+/* ================= TAGS & CATEGORIES ================= */
+.sidebar-section {
+  margin-top: 32px;
 }
+
+.sidebar-heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #111;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag-pill {
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 25px;
+  border: 1px solid #e0e0e0;
+  color: #666;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tag-pill:hover {
+  background: #f5f5f5;
+  color: #000;
+}
+
+
+
+
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .blog-detail-container {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-main {
+    height: auto;
+  }
+
+  .blog-scroll {
+    overflow: visible;
+  }
+
+  .blog-sidebar {
+    position: static;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

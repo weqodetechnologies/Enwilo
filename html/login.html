@@ -1,52 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enwilo Hero Section</title>
+  <link rel="stylesheet" href="../Css/login.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <title>Document</title>
 </head>
 <body>
 
+
+
+
+
+
+
+
+  
+  
    <!-- NAVBAR -->
 <header class="navbar">
-  <img src="images/logo.png" alt="Logo" class="logo"/>
+  <img src="../images/logo.png" alt="Logo" class="logo"/>
 
   <nav class="nav-links">
-    <a href="home.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="blogs.html">Blogs</a>
+    <a href="/html/home.html">Home</a>
+    <a href="/html/about.html">About</a>
+    <a href="/html/blogs.html">Blogs</a>
 
     <!-- INSTITUTE DROPDOWN -->
-    <div class="dropdown">
-      <a href="#" class="dropdown-toggle">
-        Institute <i class="fa fa-angle-down"></i>
-      </a>
+  <div class="dropdown">
+  <button class="dropdown-toggle" id="instituteToggle" type="button">
+    Institute <i class="fa fa-angle-down"></i>
+  </button>
 
-      <div class="dropdown-menu">
-        <a href="#"><img src="images/kids.png"> Kids School</a>
-        <a href="#"><img src="images/primary.png"> Primary Schools</a>
-        <a href="#"><img src="images/secondary.png"> Secondary Schools</a>
-        <a href="#"><img src="images/college.png"> Colleges</a>
-        <a href="#"><img src="images/coaching.png"> Coaching Institute</a>
-      </div>
-    </div>
+ 
+  <div class="dropdown-menu" id="instituteMenu">
+  <a href="../html/institute.html?category=kids">
+    <img src="../images/kids.png"> Kids School
+  </a>
 
-    <a href="contact.html">Contact</a>
+  <a href="../html/institute.html?category=primary">
+    <img src="../images/primary.png"> Primary Schools
+  </a>
+
+  <a href="../html/institute.html?category=secondary">
+    <img src="../images/secondary.png"> Secondary Schools
+  </a>
+
+  <a href="../html/institute.html?category=college">
+    <img src="../images/college.png"> Colleges
+  </a>
+
+  <a href="../html/institute.html?category=coaching">
+    <img src="../images/coaching.png"> Coaching Institute
+  </a>
+</div>
+</div>
+ 
+    
+
+    <a href="/html/contact.html">Contact</a>
   </nav>
 
   <!-- RIGHT SIDE -->
   <div class="nav-actions">
-    <a href="#login-popup" class="login-btn">Log in</a>
+    
+    <a href="../html/login.html" class="login-btn" id="openLogin">Log in</a>
+
+
     <button href="login-popupp" class="add-btn"><i class="fa-duotone fa fa-plus"></i>Add Listing</button>
   </div>
+  <script src="../js/home.js"></script>
+
 </header>
 
 
@@ -57,85 +88,38 @@
 
 
 
-<section class="contact-section">
-  <div class="contact-container">
+  <div class="login-wrapper">
+    <div class="login-card">
 
-    <!-- LEFT -->
-    <div class="contact-left">
-      <h1>Contact Us</h1>
-      <p class="contact-desc">
-        Connect with our school team to learn more about admissions,
-        academics and student development.
-      </p>
+      <h2>Welcome Back</h2>
+      <p class="sub-text">Login to continue</p>
 
-      <h3>Contact Information</h3>
-
-      <div class="contact-info">
-
-        <div class="info-item">
-          <div class="icon-circle">
-            <i class="fa fa-location-dot"></i>
-          </div>
-          <div>
-            <h4>Location</h4>
-            <p>Vasanta Vallabha Nagara, Bangalore,<br>Karnataka 560062</p>
-          </div>
-        </div>
-
-        <div class="info-item">
-          <div class="icon-circle">
-            <i class="fa fa-envelope"></i>
-          </div>
-          <div>
-            <h4>Email Us</h4>
-            <p>info@enwilo.com</p>
-          </div>
-        </div>
-
-        <div class="info-item">
-          <div class="icon-circle">
-            <i class="fa fa-phone"></i>
-          </div>
-          <div>
-            <h4>Call Us</h4>
-            <p>+91 939 594 0680</p>
-          </div>
-        </div>
-
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="example@domain.com">
       </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <div class="password-box">
+          <input type="password" id="password" placeholder="Enter your password">
+          <span class="lock" onclick="togglePassword()">🔒</span>
+        </div>
+      </div>
+
+      <div class="actions">
+  <button id="signInBtn">Sign In</button>
+  <a href="#" class="back-link" id="backToLogin">Forgot Password?</a>
+
+</div>
+
+
+      <p class="signup-text">
+  Don’t have an account? <a href="#" id="signupLink">Sign up</a>
+</p>
+
     </div>
-
-    <!-- RIGHT FORM -->
-    <form class="contact-form" id="contactForm">
-      <label>Name</label>
-      <input type="text" placeholder="Enter Your Name">
-
-
-      <label>Email</label>
-      <input type="text" placeholder="Enter Your Email">
-
-
-      <label>Subject</label>
-      <input type="text" placeholder="Enter Your Subject">
-
-      
-      <label>Message</label>
-      <textarea placeholder="Enter Your Message"></textarea>
-
-
-      <button type="submit">Send Message</button>
-    </form>
-
   </div>
-</section>
-
-
-
-
-
-
-
-
 
 
 
@@ -149,7 +133,7 @@
     <div class="footer-col footer-brand">
 
       <!-- LOGO (YAHAN LOGO IMAGE) -->
-      <img src="images/logo.png" class="footer-logo" alt="Logo">
+      <img src="../images/logo.png" class="footer-logo" alt="Logo">
 
       <p class="footer-desc">
         Enwilo helps parents and students discover top schools and coaching
@@ -164,7 +148,7 @@
         <input type="email" placeholder="Enter Your Email">
         <!-- SEND ICON YAHAN DALNA -->
         <button>
-          <img src="images/send-icon.png" alt="Send Icon">
+          <img src="../images/Icons/sendmail.png" alt="Send Icon">
         </button>
       </div>
 
@@ -185,12 +169,13 @@
     <div class="footer-col">
       <h3 class="footer-heading"><b>Quick Links</b></h3>
       <ul class="footer-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Blogs</a></li>
-        <li><a href="#">Institute</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+  <li><a href="/html/home.html">Home</a></li>
+  <li><a href="/html/about.html">About</a></li>
+  <li><a href="/html/blogs.html">Blogs</a></li>
+  <li><a href="/html/institute.html">Institute</a></li>
+  <li><a href="/html/contact.html">Contact</a></li>
+</ul>
+
     </div>
 
     <!-- RIGHT -->
@@ -240,6 +225,6 @@
 </footer>
 
 
-<script src="script.js"></script>    
+<script src="../js/login.js"></script>
 </body>
 </html>

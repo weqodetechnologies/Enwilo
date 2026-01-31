@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enwilo Hero Section</title>
+  <link rel="stylesheet" href="../Css/details.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+
+
+
+
+
+  
+  
+   <!-- NAVBAR -->
+<header class="navbar">
+  <img src="../images/logo.png" alt="Logo" class="logo"/>
+
+  <nav class="nav-links">
+    <a href="/html/home.html">Home</a>
+    <a href="/html/about.html">About</a>
+    <a href="/html/blogs.html">Blogs</a>
+
+    <!-- INSTITUTE DROPDOWN -->
+  <div class="dropdown">
+  <button class="dropdown-toggle" id="instituteToggle" type="button">
+    Institute <i class="fa fa-angle-down"></i>
+  </button>
+
+ 
+  <div class="dropdown-menu" id="instituteMenu">
+  <a href="../html/institute.html?category=kids">
+    <img src="../images/kids.png"> Kids School
+  </a>
+
+  <a href="../html/institute.html?category=primary">
+    <img src="../images/primary.png"> Primary Schools
+  </a>
+
+  <a href="../html/institute.html?category=secondary">
+    <img src="../images/secondary.png"> Secondary Schools
+  </a>
+
+  <a href="../html/institute.html?category=college">
+    <img src="../images/college.png"> Colleges
+  </a>
+
+  <a href="../html/institute.html?category=coaching">
+    <img src="../images/coaching.png"> Coaching Institute
+  </a>
+</div>
+</div>
+ 
+    
+
+    <a href="/html/contact.html">Contact</a>
+  </nav>
+
+  <!-- RIGHT SIDE -->
+  <div class="nav-actions">
+    
+    <a href="../html/login.html" class="login-btn" id="openLogin">Log in</a>
+
+
+    <button href="login-popupp" class="add-btn"><i class="fa-duotone fa fa-plus"></i>Add Listing</button>
+  </div>
+  <script src="../js/home.js"></script>
+
+</header>
+
+
+    <!-- Main section  -->
+    <section class="details-page">
+      <!-- ===== HEADER ===== -->
+      <div class="details-header">
+        <h1 id="detailTitle">Kidzee Duliajan - Kids School in Duliajan</h1>
+
+        <div class="details-sub">
+          <span class="loc">
+            <i class="fa fa-location-dot"></i>
+            <span id="detailLocation">TD Colony, Duliajan</span>
+          </span>
+
+          <span class="rating">
+            ⭐ <span id="detailReviewsCount">20</span> Reviews
+          </span>
+
+          <span class="verified">Verified Institute</span>
+        </div>
+      </div>
+
+    <section class="gallery">
+  <div class="gallery-grid">
+
+    <div class="gallery-item big-left">
+      <img src="../images/kedzee1.png" alt="Classroom" />
+    </div>
+
+    <div class="gallery-item big-mid">
+      <img src="../images/kedzee2.png" alt="Play Area" />
+    </div>
+
+    <div class="gallery-item big-right">
+      <img src="../images/kedzee3.png" alt="Admissions" />
+    </div>
+
+    <div class="gallery-item small-1">
+      <img src="../images/kedzee4.png" alt="Kids Room" />
+    </div>
+
+    <div class="gallery-item small-2">
+      <img src="../images/kedzee5.png" alt="Activity Room" />
+    </div>
+
+    <div class="gallery-item wide">
+      <img src="../images/kedzee6.png" alt="Indoor Play" />
+    </div>
+
+  </div>
+</section>
+
+  
+
+
+<section class="details-main">
+
+      <!-- ===== GALLERY ===== -->
+      <div class="details-gallery" id="detailsGallery">
+        <!-- images from JS -->
+      </div>
+
+<!-- ===== INFO CARD ===== -->
+<div class="details-info-card">
+
+  <div class="info-left">
+    <div class="info-row">
+      <div class="icon-circle"><i class="fa fa-location-dot"></i></div>
+      <span id="detailFullAddress">
+        Christian Basti Near TD Colony,<br>Duliajan Assam - 786602
+      </span>
+    </div>
+
+    <div class="info-row">
+      <div class="icon-circle"><i class="fa fa-phone"></i></div>
+      <span id="detailPhone">8638233536</span>
+    </div>
+
+    <div class="info-row">
+      <div class="icon-circle"><i class="fa fa-graduation-cap"></i></div>
+      <span>Scholarship: No</span>
+    </div>
+
+    <!-- Review teaser -->
+    <div class="rate-row">
+      <img src="../images/user.png" alt="user" />
+      <div>
+        <p>Rate Your Review</p>
+
+        <div class="review-stars" id="reviewStars">
+          <i class="fa fa-star" data-value="1"></i>
+          <i class="fa fa-star" data-value="2"></i>
+          <i class="fa fa-star" data-value="3"></i>
+          <i class="fa fa-star" data-value="4"></i>
+          <i class="fa fa-star" data-value="5"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-center">
+    <h4>Class Timings</h4>
+    <div class="timings">
+      <span>Mon 8 AM - 3 PM</span>
+      <span>Tue 8 AM - 3 PM</span>
+      <span>Wed 8 AM - 3 PM</span>
+      <span>Thu 8 AM - 3 PM</span>
+      <span>Fri 8 AM - 3 PM</span>
+      <span>Sat 8 AM - 3 PM</span>
+      <span class="off">Sun Off</span>
+    </div>
+  </div>
+
+  <div class="info-right">
+    <button class="call-btn">Call <i class="fa fa-phone"></i></button>
+    <button class="enquiry-btn">Enquiry <img src="../images/Icons/sendmail.png" alt="mail"></button>
+  </div>
+
+  <!-- ✅ REVIEW FORM (ONLY ONCE) -->
+  <div class="review-form-box" id="reviewForm">
+    <h3>Publish Your Review</h3>
+
+    <div class="form-grid">
+      <input placeholder="Your Name" />
+      <input placeholder="Phone Number" />
+      <input placeholder="Email" />
+      <input type="file" />
+    </div>
+
+    <div class="entertext">
+    <input placeholder="Enter Your Comments"></input>
+
+    </div>
+    <button class="publish-btn" id="publishReviewBtn">
+  Publish Review
+</button>
+
+  </div>
+
+</div>
+
+
+      <!-- ===== ABOUT ===== -->
+      <div class="details-about">
+  <h2 id="aboutTitle">About Kidzee Duliajan</h2>
+
+  <!-- ✅ scroll area -->
+  <div class="about-scroll">
+
+    <p id="aboutText">
+      Kidzee Duliajan, established in 2025, is a nurturing and child-friendly preschool and kindergarten
+      dedicated to providing a strong foundation for early childhood learning. Located at Christian Basti,
+      Near TD+ Colony, Duliajan – 786602, the school is committed to shaping young minds through a safe,
+      joyful, and activity-based learning environment.
+    </p>
+
+    <p id="aboutText1">
+      At Kidzee Duliajan, the focus is on holistic development, ensuring that children grow not only academically
+      but also emotionally, socially, and creatively. The preschool follows a structured yet flexible early-learning
+      approach designed to help children develop essential skills such as communication, motor coordination,
+      problem-solving, confidence, and curiosity. Through a blend of interactive activities, play-based learning,
+      storytelling, music, art, and hands-on exploration, children are encouraged to discover their abilities at their own pace.
+    </p>
+
+    <!-- ✅ second image wala new paragraph content -->
+    <p class="aboutText2">
+      The school is guided by dedicated educators and caretakers under the leadership of Pranjal Deka and Violina Kalita,
+      who ensure that each child receives personalized attention and care. Their warm and supportive teaching approach
+      helps children feel comfortable, secure, and motivated to learn every day.
+    </p>
+
+    <p class="aboutText2">
+      Kidzee Duliajan places high importance on creating a clean, hygienic, and child-safe environment. Classrooms are
+      designed to be bright, engaging, and equipped with age-appropriate learning materials that stimulate imagination
+      and creativity. The preschool also focuses on helping children develop discipline, good habits, and social values
+      that will benefit them throughout their schooling years.
+    </p>
+
+    <p class="aboutText2">
+      With a mission to make early education meaningful, enjoyable, and accessible, Kidzee Duliajan aims to prepare young
+      learners for a smooth transition into formal schooling while giving them the confidence to explore the world with
+      curiosity and enthusiasm.
+    </p>
+
+  </div>
+</div>
+
+    </section>
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- LEFT -->
+    <div class="footer-col footer-brand">
+
+      <!-- LOGO (YAHAN LOGO IMAGE) -->
+      <img src="../images/logo.png" class="footer-logo" alt="Logo">
+
+      <p class="footer-desc">
+        Enwilo helps parents and students discover top schools and coaching
+        institutes in Guwahati. We also offer intuitive School Management
+        Software for admissions, attendance and communication.
+      </p>
+
+      <h4 class="footer-title"><b>Get In Touch</b></h4>
+
+      <!-- EMAIL BOX -->
+      <div class="email-box">
+        <input type="email" placeholder="Enter Your Email">
+        <!-- SEND ICON YAHAN DALNA -->
+        <button>
+          <img src="../images/Icons/sendmail.png" alt="Send Icon">
+        </button>
+      </div>
+
+      <h5 class="footer-title"><b>Follow Us</b></h5>
+
+      <!-- SOCIAL ICONS (YAHAN AAP ICONS CHANGE KARNA) -->
+      <div class="social-icons">
+        <i class="fa fa-location-dot"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa fa-envelope"></i>
+      </div>
+
+    </div>
+
+    <!-- CENTER -->
+    <div class="footer-col">
+      <h3 class="footer-heading"><b>Quick Links</b></h3>
+      <ul class="footer-links">
+  <li><a href="/html/home.html">Home</a></li>
+  <li><a href="/html/about.html">About</a></li>
+  <li><a href="/html/blogs.html">Blogs</a></li>
+  <li><a href="/html/institute.html">Institute</a></li>
+  <li><a href="/html/contact.html">Contact</a></li>
+</ul>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="footer-col">
+      <h3 class="footer-heading"><b>Contact Information</b></h3>
+
+      <!-- LOCATION -->
+      <div class="contact-row">
+        <!-- LOCATION ICON YAHAN -->
+        <div class="icon-circle">
+        <i class="fa fa-location-dot"></i>
+        </div>
+
+        <div>
+          <strong>Location</strong>
+          <p>Vasanta Vallabha Nagara, Bangalore,<br>Karnataka 560062</p>
+          <p>Basistha Road, Guwahati 781028</p>
+        </div>
+      </div>
+
+      <!-- EMAIL -->
+      <div class="contact-row">
+        <!-- EMAIL ICON YAHAN -->
+        <div class="icon-circle">
+        <i class="fa fa-envelope"></i>
+        </div>
+        <div>
+          <strong>Email Us</strong>
+          <p>info@enwilo.com</p>
+        </div>
+      </div>
+
+      <!-- PHONE -->
+      <div class="contact-row">
+        <!-- PHONE ICON YAHAN -->
+        <div class="icon-circle">
+        <i class="fa fa-phone"></i>
+        </div>
+        <div>
+          <strong>Call Us</strong>
+          <p>+91 939 594 0680</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+    <script src="../js/details.js"></script>
+
+  </body>
+</html>

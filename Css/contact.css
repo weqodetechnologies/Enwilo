@@ -145,8 +145,8 @@ body {
   font-weight: 500;
   cursor: pointer;
   padding-top: 12px;
-}
 
+}
 /* NAV LINKS */
 .nav-links a,
 .dropdown-toggle,
@@ -162,6 +162,7 @@ body {
 .login-btn:hover {
   color: #000;
 }
+
 /* ===================== */
 /* RESPONSIVE NAVBAR */
 /* ===================== */
@@ -252,273 +253,158 @@ body {
 
 
 
-
-
-/* ================= INSTITUTE PAGE ================= */
-
-.institute-page {
-    padding: 40px 20px 80px;
-    background: #f6f7fb;
+.contact-section {
+  padding: 100px 20px;
+  background: #ffffff;
 }
 
-/* SEARCH BAR */
-
-.institute-search-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 25px;
+.contact-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 80px;
 }
 
-.search-pill {
-    display: flex;
-    align-items: center;
-    background: white;
-    border-radius: 50px;
-    padding: 10px 12px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-    gap: 14px;
-    flex-wrap: wrap;
+/* LEFT */
+.contact-left {
+  flex: 1;
 }
 
-.search-field {
-    display: flex;
-    flex-direction: column;
-    padding: 0 14px;
+.contact-left h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-family: "Montserrat", sans-serif;
 }
 
-.search-field label {
-    font-size: 12px;
-    font-weight: 700;
+.contact-desc {
+  color: #777;
+  font-size: 16px;
+  max-width: 420px;
+  margin-bottom: 40px;
 }
 
-.search-field input {
-    border: none;
-    outline: none;
-    font-size: 14px;
-    width: 180px;
+.contact-left h3 {
+  font-size: 22px;
+  margin-bottom: 25px;
+  font-family: "Montserrat", sans-serif;
 }
 
-.divider {
-    width: 1px;
-    height: 36px;
-    background: #ddd;
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
-.search-btn {
-    background: #ff7a00;
-    color: white;
-    border: none;
-    padding: 12px 22px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: 600;
+.info-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
 }
 
-/* CATEGORY PILLS */
-
-/* CATEGORY PILLS */
-
-
-
-/* Base pill */
-
-.pill {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    padding: 12px 20px;
-    border-radius: 999px;
-
-    background: #ffffff;
-    border: 1px solid #eee;
-
-    cursor: pointer;
-    font-weight: 550;
-    font-size: 14px;
-
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    transition: all 0.25s ease;
-
-    color: #222;
+.info-icon {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
 }
 
-.category-pills {
-    display: grid;
-    grid-template-columns: repeat(3, 240px);
-    justify-content: center;
-    gap: 20px 34px;
-    margin-bottom: 40px;
+.info-item h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
 }
 
-
-/* Move only 4th and 5th to second row center */
-
-.category-pills .pill:nth-child(4) {
-    grid-column: 1;
-    justify-self: center;
+.info-item p {
+  font-size: 14px;
+  color: #666;
 }
 
-.category-pills .pill:nth-child(5) {
-    grid-column: 2;
-    justify-self: center;
+/* RIGHT FORM */
+.contact-form {
+  flex: 1;
+  background: #fff;
+  border-radius: 18px;
+  padding: 35px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
-/* Icon inside pill */
-
-.pill img,
-.pill i {
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
+.contact-form label {
+  font-size: 14px;
+  margin-bottom: 6px;
 }
 
-/* Hover effect (FLOATING LOOK) */
-
-.pill:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 14px 35px rgba(13, 13, 13, 0.18);
-    border-color: #2b4eff;
-    color: #2b4eff;
-    background: #f4f6ff;
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
 }
 
-/* Active pill */
-
-.pill.active {
-    background: #eef2ff;
-    border-color: #2b4eff;
-    color: #2b4eff;
-    box-shadow: 0 14px 35px rgba(13, 13, 13, 0.20);
+.contact-form textarea {
+  resize: none;
+  height: 120px;
+  color: #C2C2C2;
 }
 
-/* Filter special */
-
-.filter-pill {
-    padding: 12px 22px;
+.contact-form button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #F97316, #F97316);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* ICON CIRCLE */
+.icon-circle {
+  width: 44px;
+  height: 44px;
+  background: #F97316;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-/* GRID */
-
-.institute-grid {
-    max-width: 1300px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 28px;
+.icon-circle i {
+  color: #fff;
+  font-size: 18px;
 }
 
-/* CARD */
-
-.institute-card {
-    background: white;
-    border-radius: 22px;
-    overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-    transition: all .3s ease;
+/* GAP FIX */
+.info-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
 }
 
-.institute-card:hover {
-    transform: translateY(-8px);
-}
-
-.institute-card img {
-    width: 100%;
-  padding: 10px;
-  border-radius: 24px;
-  height: 170px;
-  object-fit: cover;
-}
-
-.card-body {
-    padding: 16px;
-}
-
-.star-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 2px;
-}
-
-.card-top-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-/* .rating {
-    color: #FFE500;
-    font-size: 16px;
-    margin-bottom: 6px;
-} */
-
-.rating i {
-    color: #FFE500;
-    font-size: 16px;
-    margin-right: 2px;
-}
-
-.reviews {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 13px;
-    color: #777;
-}
-
-.card-body h3 {
-    font-size: 17px;
-    margin-bottom: 6px;
-    font-family: "Montserrat", sans-serif;
-}
-
-.card-body p {
-    font-size: 13px;
-    color: #666;
-}
-
-.tag {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 5px 14px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-    border: 1px solid #ddd;
+/* BUTTON HOVER */
+.contact-form button:hover {
+  background: linear-gradient(90deg, #ea580c, #f97316);
 }
 
 /* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+  }
 
-@media (max-width: 768px) {
-    .search-pill {
-        border-radius: 20px;
-    }
-
-    .search-field input {
-        width: 100%;
-    }
-
-    .divider {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
-    .category-pills {
-        grid-template-columns: repeat(2, auto);
-    }
-
-    .category-pills .pill {
-        grid-column: auto !important;
-        justify-self: center !important;
-    }
+  .contact-form {
+    margin-top: 40px;
+  }
 }
 
 
-
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}
 
 
 

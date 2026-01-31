@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog Detail</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hero Section</title>
+   <link rel="stylesheet" href="../Css/blogsopen.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,45 +19,63 @@
 
 
 
+
+  
    <!-- NAVBAR -->
 <header class="navbar">
-  <img src="images/logo.png" alt="Logo" class="logo"/>
+  <img src="../images/logo.png" alt="Logo" class="logo"/>
 
   <nav class="nav-links">
-    <a href="home.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="blogs.html">Blogs</a>
+    <a href="/html/home.html">Home</a>
+    <a href="/html/about.html">About</a>
+    <a href="/html/blogs.html">Blogs</a>
 
     <!-- INSTITUTE DROPDOWN -->
-    <div class="dropdown">
-      <a href="#" class="dropdown-toggle">
-        Institute <i class="fa fa-angle-down"></i>
-      </a>
+  <div class="dropdown">
+  <button class="dropdown-toggle" id="instituteToggle" type="button">
+    Institute <i class="fa fa-angle-down"></i>
+  </button>
 
-      <div class="dropdown-menu">
-        <a href="#"><img src="images/kids.png"> Kids School</a>
-        <a href="#"><img src="images/primary.png"> Primary Schools</a>
-        <a href="#"><img src="images/secondary.png"> Secondary Schools</a>
-        <a href="#"><img src="images/college.png"> Colleges</a>
-        <a href="#"><img src="images/coaching.png"> Coaching Institute</a>
-      </div>
-    </div>
 
-    <a href="contact.html">Contact</a>
+  <div class="dropdown-menu" id="instituteMenu">
+  <a href="../html/institute.html?category=kids">
+    <img src="../images/kids.png"> Kids School
+  </a>
+
+  <a href="../html/institute.html?category=primary">
+    <img src="../images/primary.png"> Primary Schools
+  </a>
+
+  <a href="../html/institute.html?category=secondary">
+    <img src="../images/secondary.png"> Secondary Schools
+  </a>
+
+  <a href="../html/institute.html?category=college">
+    <img src="../images/college.png"> Colleges
+  </a>
+
+  <a href="../html/institute.html?category=coaching">
+    <img src="../images/coaching.png"> Coaching Institute
+  </a>
+</div>
+</div>
+ 
+    
+
+    <a href="/html/contact.html">Contact</a>
   </nav>
 
   <!-- RIGHT SIDE -->
   <div class="nav-actions">
-    <a href="#login-popup" class="login-btn">Log in</a>
+    
+    <a href="../html/login.html" class="login-btn" id="openLogin">Log in</a>
+
+
     <button href="login-popupp" class="add-btn"><i class="fa-duotone fa fa-plus"></i>Add Listing</button>
   </div>
+  <script src="../js/home.js"></script>
+
 </header>
-
-  
-
-
-
-
 
 
 
@@ -68,7 +86,7 @@
   <article class="blog-main">
 
   <!-- IMAGE -->
-  <img src="images/selection.png" class="blog-hero" alt="Blog Image">
+  <img src="../images/selection.png" class="blog-hero" alt="Blog Image">
 
   <!-- DATE -->
   <div class="blog-date">Published on 27 Nov, 2025</div>
@@ -99,7 +117,7 @@
     <p>
       This guide will walk you through a <b>simple, practical, parent-friendly framework</b>you can use from anywhere in the world.
     </p>
-   <h1>1.Strat With Understanding the Education System of That City/Country </h1>
+   <h1>1.Start With Understanding the Education System of That City/Country </h1>
    <p>Every region has its own Schooling style. Some cities offer international boards widely, while others focus on national or local boards.</p>
    <h3>What You Should Do</h3>
    
@@ -267,7 +285,7 @@
   <!-- CARD 1 -->
   <div class="related-post-card">
     <div class="related-post-img">
-      <img src="images/choose.png" alt="">
+      <img src="../images/choose.png" alt="">
     </div>
 
     <div class="related-post-info">
@@ -285,7 +303,7 @@
   <!-- CARD 2 -->
   <div class="related-post-card">
     <div class="related-post-img">
-      <img src="images/parent.png" alt="">
+      <img src="../images/parent.png" alt="">
     </div>
 
     <div class="related-post-info">
@@ -340,6 +358,9 @@
 
 
 
+
+
+
 <footer class="footer">
   <div class="footer-container">
 
@@ -347,7 +368,7 @@
     <div class="footer-col footer-brand">
 
       <!-- LOGO (YAHAN LOGO IMAGE) -->
-      <img src="images/logo.png" class="footer-logo" alt="Logo">
+      <img src="../images/logo.png" class="footer-logo" alt="Logo">
 
       <p class="footer-desc">
         Enwilo helps parents and students discover top schools and coaching
@@ -362,7 +383,7 @@
         <input type="email" placeholder="Enter Your Email">
         <!-- SEND ICON YAHAN DALNA -->
         <button>
-          <img src="images/send-icon.png" alt="Send Icon">
+          <img src="../images/Icons/sendmail.png" alt="Send Icon">
         </button>
       </div>
 
@@ -383,12 +404,13 @@
     <div class="footer-col">
       <h3 class="footer-heading"><b>Quick Links</b></h3>
       <ul class="footer-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Blogs</a></li>
-        <li><a href="#">Institute</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+  <li><a href="/html/home.html">Home</a></li>
+  <li><a href="/html/about.html">About</a></li>
+  <li><a href="/html/blogs.html">Blogs</a></li>
+  <li><a href="/html/institute.html">Institute</a></li>
+  <li><a href="/html/contact.html">Contact</a></li>
+</ul>
+
     </div>
 
     <!-- RIGHT -->
@@ -436,9 +458,6 @@
 
   </div>
 </footer>
-
-
-
 
 
 
