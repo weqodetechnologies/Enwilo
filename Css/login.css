@@ -318,7 +318,7 @@ body {
 }
 
 .actions button {
-  background: #3f51e5;
+  background: #1e40af;
   color: white;
   border: none;
   padding: 10px 22px;
@@ -328,12 +328,12 @@ body {
 }
 
 .actions button:hover {
-  background: #3f51e5;
+  background: #1e40af;
 }
 
 .actions a {
   font-size: 13px;
-  color: #3f51e5;
+  color: #1e40af;
   text-decoration: none;
 }
 
@@ -345,7 +345,7 @@ body {
 }
 
 .signup-text a {
-  color: #3f51e5;
+  color: #1e40af;
   text-decoration: none;
 }
 /* ===================== */

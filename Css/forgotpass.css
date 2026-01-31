@@ -313,7 +313,7 @@ input {
 }
 
 input:focus {
-  border-color: #3f51e5;
+  border-color: #1e40af;
   box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.15);
 }
 
@@ -322,7 +322,7 @@ input:focus {
   padding: 12px;
   border: none;
   border-radius: 6px;
-  background: #3f51e5;
+  background: #1e40af;
   color: white;
   font-size: 15px;
   cursor: pointer;
@@ -330,7 +330,7 @@ input:focus {
 }
 
 .btn-primary:hover {
-  background: #3f51e5;
+  background: #1e40af;
 }
 
 .back-link {
