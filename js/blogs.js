@@ -21,3 +21,32 @@ links.forEach(link => {
     link.classList.add("active");
   }
 });
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const grid1 = document.getElementById("blogsGrid1");
+  const grid2 = document.getElementById("blogsGrid2");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  function show1(){
+    grid1.classList.remove("is-hidden");
+    grid2.classList.add("is-hidden");
+    prevBtn.disabled = true;
+    nextBtn.disabled = false;
+  }
+  function show2(){
+    grid1.classList.add("is-hidden");
+    grid2.classList.remove("is-hidden");
+    prevBtn.disabled = false;
+    nextBtn.disabled = true;
+  }
+
+  nextBtn.addEventListener("click", show2);
+  prevBtn.addEventListener("click", show1);
+
+  show1();
+});

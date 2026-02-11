@@ -4,8 +4,6 @@
   box-sizing: border-box;
 }
 
-
-/* 2. Body styles */
 body {
   background-color: #f5f5f5;
   color: #333;
@@ -13,85 +11,106 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
-
-/* NAVBAR */
+/* ===================== */
+/* NAVBAR (FLUID) */
+/* ===================== */
 .navbar {
   position: relative;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 95px;
+
+  /* ✅ fluid padding for all screens */
+  padding: 18px clamp(16px, 4vw, 95px);
   padding-top: 30px;
+  gap: 16px;
+  width: 100%;
+  max-width: 1420px; /* ✅ fixed max width */
+  margin: 0 auto;
 }
 
 .logo {
-  width: 150px;
+  width: clamp(110px, 12vw, 150px);
+  height: auto;
 }
 
 /* NAV LINKS */
 .nav-links {
   display: flex;
   align-items: center;
+  gap: 10px;
+  flex-wrap: wrap; /* ✅ prevent overflow */
+  justify-content: center;
 }
 
 /* LINKS */
 .nav-links a {
-  margin: 0 15px;
   text-decoration: none;
   color: #333;
   font-size: 17px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 6px;
+
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.25s;
 }
 
 .nav-links img {
-  width: 25px;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
 }
 
 /* ===================== */
-/* INSTITUTE DROPDOWN */
+/* DROPDOWN */
 /* ===================== */
-
 .dropdown {
   position: relative;
 }
 
-.dropdown-toggle img{
-     left: 76px;
-}
 .dropdown-toggle {
   background: none;
   border: none;
   font-size: 17px;
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0px;
-  color: #555; 
-  padding-left: 10px;
-  padding-right: 10px;
+  gap: 6px;
+  color: #555;
+
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.25s;
 }
 
+/* ✅ Remove useless left positioning */
+.dropdown-toggle img {
+  position: static;
+}
+
+/* Dropdown menu */
 .dropdown-menu {
   position: absolute;
-  top: 45px;
+  top: calc(100% + 10px);
   left: 0;
   background: #fff;
   width: 240px;
   border-radius: 14px;
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
   padding: 10px;
+
   display: none;
   flex-direction: column;
-  z-index: 999; 
+  z-index: 999;
 }
+
 /* Show when active */
 .dropdown-menu.show {
   display: flex;
 }
-
 
 /* Dropdown items */
 .dropdown-menu a {
@@ -105,7 +124,6 @@ body {
   border-radius: 10px;
 }
 
-/* Dropdown item icons */
 .dropdown-menu a img {
   width: 26px;
   height: 26px;
@@ -117,16 +135,20 @@ body {
 }
 
 /* ===================== */
-
+/* RIGHT ACTIONS */
+/* ===================== */
 .nav-actions {
   display: flex;
-  gap: 28px;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
 }
 
 .add-btn {
   background: #1e40af;
   color: #fff;
   border: none;
+
   width: 150px;
   height: 50px;
   font-size: 17px;
@@ -135,22 +157,13 @@ body {
   cursor: pointer;
 }
 
-
-
-/* LOGIN */
 .login-btn {
   text-decoration: none;
   color: #555;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 500;
   cursor: pointer;
-  padding-top: 12px;
 
-}
-/* NAV LINKS */
-.nav-links a,
-.dropdown-toggle,
-.login-btn {
   padding: 8px 14px;
   border-radius: 6px;
   transition: 0.25s;
@@ -164,18 +177,14 @@ body {
 }
 
 /* ===================== */
-/* RESPONSIVE NAVBAR */
+/* RESPONSIVE */
 /* ===================== */
 
-/* TABLET */
+/* Tablet */
 @media (max-width: 992px) {
-  .navbar {
-    padding: 20px 40px;
-  }
-
-  .nav-links a {
+  .nav-links a,
+  .dropdown-toggle {
     font-size: 16px;
-    margin: 0 10px;
   }
 
   .add-btn {
@@ -189,79 +198,90 @@ body {
   }
 }
 
-/* MOBILE */
+/* Mobile */
 @media (max-width: 768px) {
   .navbar {
     flex-wrap: wrap;
-    gap: 18px;
-  }
-
-  .nav-links {
-    width: 100%;
     justify-content: center;
-    flex-wrap: wrap;
-    row-gap: 12px;
+    padding-top: 20px;
   }
 
-  .nav-links a {
-    margin: 0 8px;
-    font-size: 15px;
-  }
-
+  /* ✅ Make sections full width */
+  .nav-links,
   .nav-actions {
     width: 100%;
     justify-content: center;
   }
 
+  .nav-actions {
+    flex-wrap: wrap;
+  }
+
+  /* ✅ Make dropdown menu fit mobile screen */
   .dropdown-menu {
     position: static;
-    box-shadow: none;
     width: 100%;
-    padding: 0;
+    box-shadow: none;
+    border-radius: 12px;
     margin-top: 8px;
-    border-radius: 0;
-  }
-
-  .dropdown:hover .dropdown-menu {
-    display: none;
-  }
-
-  /* Mobile open on click simulation */
-  .dropdown:focus-within .dropdown-menu {
-    display: flex;
   }
 }
 
-/* SMALL MOBILE */
+/* Small mobile (iPhone SE) */
 @media (max-width: 480px) {
-  .logo {
-    width: 120px;
-  }
-
   .add-btn {
     width: 100%;
     height: 48px;
   }
+
+  .nav-links a,
+  .dropdown-toggle,
+  .login-btn {
+    padding: 8px 10px;
+    font-size: 15px;
+  }
+}
+/* ===== Add Listing Button Responsive ===== */
+.add-btn {
+  width: auto; /* ✅ not fixed */
+  min-width: 140px; /* ✅ desktop look */
+  height: 50px;
+  padding: 10px 18px; /* ✅ better than fixed width */
+  font-size: 17px;
+  border-radius: 999px;
+  white-space: nowrap; /* ✅ text break nahi hoga */
 }
 
+/* Tablet */
+@media (max-width: 992px) {
+  .add-btn {
+    min-width: 125px;
+    height: 46px;
+    padding: 9px 16px;
+    font-size: 16px;
+  }
+}
 
+/* Mobile */
+@media (max-width: 768px) {
+  .add-btn {
+    min-width: 110px; /* ✅ smaller on mobile */
+    height: 42px;
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Small mobile */
+@media (max-width: 480px) {
+  .add-btn {
+    width: auto !important; /* ✅ override your old width:100% */
+    min-width: 100px;
+    height: 40px;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
 
 /* ================================= BLOG SECTION ============================= */
 
@@ -292,11 +312,11 @@ body {
   background: #fff;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
 }
 
-.blog-card img{
+.blog-card img {
   width: 390px;
   height: 230px;
   padding-left: 20px;
@@ -331,19 +351,28 @@ body {
   margin-bottom: 12px;
 }
 
-
-
 .blog-tags span {
-  font-size: 11px;
-  padding: 10px 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  padding: 10px 26px;
   background: #f1f5f9;
   border-radius: 20px;
-  color: #333;
+  color: #2b2b2b;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 999px;
   white-space: nowrap;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+}
+/* 🔥 HOVER EFFECT */
+.blog-tags span:hover {
+  background-color: #fdf8f8;
 }
 
 .blog-tags span:nth-child(2n) {
-  margin-right: auto;   /* pushes next tag to next row */
+  margin-right: auto; /* pushes next tag to next row */
 }
 
 .blog-content h3 {
@@ -360,7 +389,7 @@ body {
   line-height: 1.6;
   margin-bottom: 16px;
   display: -webkit-box;
-  -webkit-line-clamp: 2;   /* Number of lines before cutting */
+  -webkit-line-clamp: 2; /* Number of lines before cutting */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -383,17 +412,29 @@ body {
 }
 
 .blog-pagination button {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: none;
   background: #e5e7eb;
   cursor: pointer;
-  font-size: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.25s ease;
+}
+
+.blog-pagination button img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 
 .blog-pagination button:hover {
-  background: #d1d5db;
+  background: #f97316;
+  transform: translateY(-2px);
 }
 
 /* ================= RESPONSIVE BLOG GRID ================= */
@@ -442,11 +483,145 @@ body {
   }
 }
 
+/* =============================== */
+/* BLOG RESPONSIVE (ONLY TAB + MOBILE) */
+/* Laptop unchanged */
+/* =============================== */
 
+/* Tablet */
+@media (max-width: 992px) {
+  .blogs-section {
+    padding: 55px 16px;
+  }
 
+  .blogs-title {
+    font-size: 30px; /* laptop stays same; this is for smaller screens */
+    margin-bottom: 28px;
+  }
 
+  .blogs-grid {
+    gap: 24px;
+  }
 
+  /* Fix fixed image size */
+  .blog-card img {
+    width: 100%;
+    height: auto;
+    padding: 14px;
+    border-radius: 18px;
+    display: block;
+  }
 
+  .blog-content {
+    padding: 16px 16px 20px;
+  }
+
+  .blog-tags span {
+    padding: 8px 16px;
+    font-size: 11px;
+  }
+}
+
+/* Mobile / iPhone */
+@media (max-width: 600px) {
+  .blogs-section {
+    padding: 45px 14px;
+  }
+
+  .blogs-title {
+    font-size: 22px;
+    margin-bottom: 22px;
+  }
+
+  .blogs-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  /* Make image full width (no overflow) */
+  .blog-card img {
+    width: 100%;
+    height: auto;
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  /* If you use .blog-img wrapper, make it auto height */
+  .blog-img {
+    height: auto;
+  }
+
+  .blog-content h3 {
+    font-size: 15px;
+  }
+
+  .blog-content p {
+    font-size: 13px;
+  }
+
+  /* tags should wrap nicely */
+  .blog-tags {
+    gap: 8px;
+  }
+
+  .blog-tags span {
+    padding: 8px 14px;
+    white-space: normal; /* allow wrap on small phones */
+  }
+
+  /* remove this rule effect on mobile (it pushes tags weird) */
+  .blog-tags span:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+/* Very small phones (iPhone SE) */
+@media (max-width: 380px) {
+  .blog-pagination button {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
+
+/* ✅ hide/show grids */
+.is-hidden {
+  display: none !important;
+}
+
+/* ✅ responsive overlay image sizing (same as your tablet/mobile rules) */
+@media (max-width: 992px) {
+  .blog-img-wrap {
+    padding: 14px;
+  }
+  .blog-img-wrap img {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+  }
+  .blog-img-overlay {
+    top: 14px;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-img-wrap {
+    padding: 12px;
+  }
+  .blog-img-overlay {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    border-radius: 16px;
+  }
+  .blog-img-overlay h4 {
+    font-size: 14px;
+  }
+}
 
 /* footer*/
 
@@ -455,14 +630,11 @@ body {
   padding: 300px 30px;
   font-family: Arial, sans-serif;
 } */
-
 .footer {
   background: #f7f8fa;
- 
 }
 
 .footer-container {
-
   margin: auto;
   display: grid;
   grid-template-columns: 2fr 1fr 1.5fr;
@@ -491,9 +663,6 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-
-
-/* EMAIL */
 /* EMAIL */
 .email-box {
   display: flex;
@@ -550,8 +719,8 @@ body {
 .social-icons i {
   width: 40px;
   height: 40px;
-  background: #F97316;      /* same orange */
-  color: #fff;              /* icon white */
+  background: #f97316; /* same orange */
+  color: #fff; /* icon white */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -560,11 +729,10 @@ body {
   cursor: pointer;
 }
 
-
 .icon-circle {
   width: 40px;
   height: 40px;
-  background: #F97316;   /* FIGMA ORANGE */
+  background: #f97316; /* FIGMA ORANGE */
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -578,9 +746,6 @@ body {
   height: 18px;
   filter: brightness(0) invert(1); /* icon white */
 }
-
-
-
 
 /* CENTER */
 .footer-heading {
@@ -645,7 +810,6 @@ body {
   font-weight: 600;
 }
 
-
 /* RESPONSIVE */
 @media (max-width: 992px) {
   .footer-container {
@@ -657,5 +821,77 @@ body {
   .footer-container {
     grid-template-columns: 1fr;
     padding: 50px 30px;
+  }
+}
+/* =============================== */
+/* FOOTER RESPONSIVE (ONLY TAB + MOBILE) */
+/* Laptop/Desktop unchanged */
+/* =============================== */
+
+/* TAB (<= 992px) */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px; /* reduce huge gap */
+    padding: 50px 40px; /* reduce padding */
+  }
+
+  .email-box {
+    width: 100%;
+    max-width: 320px; /* looks good on tab */
+  }
+}
+
+/* MOBILE / iPHONE (<= 600px) */
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 36px 18px; /* mobile padding */
+  }
+
+  .footer-logo {
+    width: 130px;
+  }
+
+  .footer-title h4 {
+    font-size: 20px;
+  }
+
+  .footer-desc {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  /* ✅ email input full width */
+  .email-box {
+    width: 100%;
+  }
+
+  /* icons a bit smaller */
+  .social-icons i,
+  .icon-circle {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .icon-circle img {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* text size small */
+  .footer-links a,
+  .contact-row p,
+  .contact-row strong {
+    font-size: 13px;
+  }
+}
+
+/* VERY SMALL (iPhone SE) */
+@media (max-width: 380px) {
+  .footer-container {
+    padding: 28px 14px;
   }
 }
