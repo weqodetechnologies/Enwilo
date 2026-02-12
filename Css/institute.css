@@ -571,6 +571,7 @@ body {
   padding: 300px 30px;
   font-family: Arial, sans-serif;
 } */
+
 .footer {
   background: #f7f8fa;
  
@@ -591,7 +592,7 @@ body {
 /* LEFT */
 .footer-logo {
   width: 150px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .footer-desc {
@@ -601,7 +602,7 @@ body {
   margin-bottom: 28px;
 }
 
-.footer-title h4 {
+.footer-title h4{
   font-size: 24px;
   font-family: "Montserrat", sans-serif;
 }
@@ -618,6 +619,8 @@ body {
   overflow: hidden;
   background: #fff;
   padding: 4px;
+  margin-top: 10px;
+  margin-bottom: 15px  ;
 }
 
 
@@ -847,3 +850,4 @@ body {
     padding: 28px 14px;
   }
 }
+

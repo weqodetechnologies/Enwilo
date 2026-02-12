@@ -400,8 +400,15 @@ body {
   color: #777;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 19px;
 }
+
+.blog-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;   /* 👈 icon aur text ke beech gap */
+}
+
 
 /* PAGINATION */
 .blog-pagination {
@@ -623,6 +630,11 @@ body {
   }
 }
 
+
+
+
+
+
 /* footer*/
 
 /* .footer {
@@ -630,11 +642,14 @@ body {
   padding: 300px 30px;
   font-family: Arial, sans-serif;
 } */
+
 .footer {
   background: #f7f8fa;
+ 
 }
 
 .footer-container {
+
   margin: auto;
   display: grid;
   grid-template-columns: 2fr 1fr 1.5fr;
@@ -648,7 +663,7 @@ body {
 /* LEFT */
 .footer-logo {
   width: 150px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .footer-desc {
@@ -658,10 +673,12 @@ body {
   margin-bottom: 28px;
 }
 
-.footer-title h4 {
+.footer-title h4{
   font-size: 24px;
   font-family: "Montserrat", sans-serif;
 }
+
+
 
 /* EMAIL */
 .email-box {
@@ -673,7 +690,10 @@ body {
   overflow: hidden;
   background: #fff;
   padding: 4px;
+  margin-top: 10px;
+  margin-bottom: 15px  ;
 }
+
 
 .email-box input {
   flex: 1;
@@ -690,6 +710,7 @@ body {
   border: none;
   box-shadow: none;
 }
+
 
 .email-box button {
   width: 60px;
@@ -719,8 +740,8 @@ body {
 .social-icons i {
   width: 40px;
   height: 40px;
-  background: #f97316; /* same orange */
-  color: #fff; /* icon white */
+  background: #F97316;      /* same orange */
+  color: #fff;              /* icon white */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -729,10 +750,11 @@ body {
   cursor: pointer;
 }
 
+
 .icon-circle {
   width: 40px;
   height: 40px;
-  background: #f97316; /* FIGMA ORANGE */
+  background: #F97316;   /* FIGMA ORANGE */
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -746,6 +768,9 @@ body {
   height: 18px;
   filter: brightness(0) invert(1); /* icon white */
 }
+
+
+
 
 /* CENTER */
 .footer-heading {
@@ -810,6 +835,7 @@ body {
   font-weight: 600;
 }
 
+
 /* RESPONSIVE */
 @media (max-width: 992px) {
   .footer-container {
@@ -832,13 +858,13 @@ body {
 @media (max-width: 992px) {
   .footer-container {
     grid-template-columns: 1fr 1fr;
-    gap: 40px; /* reduce huge gap */
-    padding: 50px 40px; /* reduce padding */
+    gap: 40px;            /* reduce huge gap */
+    padding: 50px 40px;   /* reduce padding */
   }
 
   .email-box {
     width: 100%;
-    max-width: 320px; /* looks good on tab */
+    max-width: 320px;     /* looks good on tab */
   }
 }
 
@@ -847,7 +873,7 @@ body {
   .footer-container {
     grid-template-columns: 1fr;
     gap: 28px;
-    padding: 36px 18px; /* mobile padding */
+    padding: 36px 18px;   /* mobile padding */
   }
 
   .footer-logo {

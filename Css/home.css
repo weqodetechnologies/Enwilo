@@ -1004,7 +1004,7 @@ body {
 
 /* SECTION */
 .how-it-works {
-  padding: 100px 20px;
+  padding: 80px 20px;
   background: #fff;
   text-align: center;
 }
@@ -1278,9 +1278,9 @@ body {
 
 .section-title {
   text-align: center;
-  font-size: 42px;
+  font-size: 46px;
   font-weight: 800;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   background: #fff;
   font-family: "Montserrat", sans-serif;
 }
@@ -1288,7 +1288,7 @@ body {
 /* TABS */
 .institute-tabs {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .tab-btn {
@@ -1353,8 +1353,9 @@ body {
 
 .institute-name {
   font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 6px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .institute-location {
@@ -1377,11 +1378,15 @@ body {
   gap: 6px;
   color: #888;
   font-size: 14px;
+  margin-bottom: 18px;
 }
 .review-count svg {
   width: 18px;
   height: 18px;
   opacity: 0.7;
+}
+.stars{
+  margin-bottom: 18px;
 }
 /* ========================= */
 /* RESPONSIVE (KEEP LAPTOP SAME) */
@@ -1971,6 +1976,7 @@ body {
   justify-content:space-between;
   gap: 12px;
   padding: 0 16px 10px;   /* optional: thoda spacing */
+  margin-bottom: -20px;
 }
 
 /* stars */
@@ -1978,12 +1984,14 @@ body {
   display:flex;
   align-items:center;
   gap: 4px;
-  flex: 1;                /* left side takes space */
+  flex: 1;             /* left side takes space */
+  margin-top: 18px;
 }
 
 .rating1 .stars i{
   color:#FBBF24;
   font-size:18px;
+  margin-top: 18px; 
 }
 
 /* reviews right side */
@@ -1995,29 +2003,32 @@ body {
   font-size:14px;
   font-weight:500;
   flex-shrink:0;
+  margin-top: 18px;
   white-space:nowrap;
 }
 
 .rating1 .review-count i{
   color:#9AA0A6;
   font-size:16px;
+  margin-top: 18px; 
 }
 
 .rating1 .review-count span{
   display:inline-block;
   min-width: 18px;
+  margin-top: 18px;
 }
 
 
 .card1-body h3 {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
   font-family: "Montserrat", sans-serif;
 }
 
 .card1-body p {
-  font-size: 13px;
+  font-size: 14px;
   color: #777;
   line-height: 1.4;
   margin-bottom: 10px;
@@ -2031,6 +2042,7 @@ body {
   border-radius: 999px;
   border: 1px solid #ddd;
 }
+
 
 /* =============================== */
 /* RESPONSIVE ONLY (KEEP LAPTOP SAME) */
@@ -2162,7 +2174,7 @@ body {
 }
 
 .cta-content p {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.6;
   max-width: 520px;
   margin: 0 auto 28px;
@@ -2226,7 +2238,7 @@ body {
 }
 
 .star {
-  top: 40px;
+  top: 20px;
   left: 40%;
   transform: translateX(-50%);
   font-size: 40px;
@@ -2242,8 +2254,8 @@ body {
 }
 
 .right-wave {
-  top: 100px;
-  right: 240px;
+  top: 80px;
+  right: 200px;
 }
 
 /* RESPONSIVE */
@@ -2385,7 +2397,7 @@ body {
 /* LEFT */
 .footer-logo {
   width: 150px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .footer-desc {
@@ -2395,7 +2407,7 @@ body {
   margin-bottom: 28px;
 }
 
-.footer-title h4 {
+.footer-title h4{
   font-size: 24px;
   font-family: "Montserrat", sans-serif;
 }
@@ -2412,6 +2424,8 @@ body {
   overflow: hidden;
   background: #fff;
   padding: 4px;
+  margin-top: 10px;
+  margin-bottom: 15px  ;
 }
 
 
