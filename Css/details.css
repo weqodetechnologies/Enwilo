@@ -176,6 +176,19 @@ body {
   color: #000;
 }
 
+/* Hover */
+.nav-links a:hover,
+.dropdown-toggle:hover {
+  color: #111;   /* thoda dark */
+}
+
+/* Active page (current page) */
+.nav-links a.active,
+.dropdown-toggle.active {
+  color: #000;   /* sabse dark */
+  font-weight: 600; /* optional */
+}
+
 /* ===================== */
 /* RESPONSIVE */
 /* ===================== */
@@ -473,7 +486,7 @@ body {
 
 /* REVIEW FORM */
 .review-form-box {
-    margin: 30px auto;
+    margin: 0px auto;
     background: #fff;
     border-radius: 20px;
     padding: 25px;
@@ -538,7 +551,7 @@ body {
 /* ✅ Scroll box (yahi second image jaisa banayega) */
 .about-scroll {
   margin-top: 14px;
-  max-height: 210px;     /* ✅ isi se scrolling add hogi */
+  max-height: 300px;     /* ✅ isi se scrolling add hogi */
   overflow-y: auto;
   padding-right: 10px;   /* scrollbar space */
 }

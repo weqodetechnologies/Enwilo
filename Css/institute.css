@@ -175,6 +175,19 @@ body {
 .login-btn:hover {
   color: #000;
 }
+/* Hover */
+.nav-links a:hover,
+.dropdown-toggle:hover {
+  color: #111;   /* thoda dark */
+}
+
+/* Active page (current page) */
+.nav-links a.active,
+.dropdown-toggle.active {
+  color: #000;   /* sabse dark */
+  font-weight: 600; /* optional */
+}
+
 
 /* ===================== */
 /* RESPONSIVE */
@@ -201,9 +214,12 @@ body {
 /* Mobile */
 @media (max-width: 768px) {
   .navbar {
+     max-width: 100%;
+    padding: 14px 16px;
+    padding-top: 14px;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 20px;
+    gap: 12px;
   }
 
   /* ✅ Make sections full width */
@@ -262,26 +278,7 @@ body {
   }
 }
 
-/* Mobile */
-@media (max-width: 768px){
-  .add-btn{
-    min-width: 110px;          /* ✅ smaller on mobile */
-    height: 42px;
-    padding: 8px 14px;
-    font-size: 14px;
-  }
-}
 
-/* Small mobile */
-@media (max-width: 480px){
-  .add-btn{
-    width: auto !important;    /* ✅ override your old width:100% */
-    min-width: 100px;
-    height: 40px;
-    padding: 8px 12px;
-    font-size: 13px;
-  }
-}
 
 
 

@@ -594,4 +594,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+const toggle = document.getElementById("instituteToggle");
+const menu = document.getElementById("instituteMenu");
+
+toggle.addEventListener("click", (e) => {
+  e.stopPropagation();
+  menu.classList.toggle("show");
+});
+
+// outside click close
+document.addEventListener("click", () => {
+  menu.classList.remove("show");
+});
+
+
+
+
+
+  const currentPage = window.location.pathname;
+  const links = document.querySelectorAll(".nav-links a");
+
+  links.forEach(link => {
+    if (link.getAttribute("href").includes(currentPage)) {
+      link.classList.add("active");
+    }
+  });
+
+  // If institute page
+  if (currentPage.includes("institute.html")) {
+    document.getElementById("instituteToggle").classList.add("active");
+  }
+
 

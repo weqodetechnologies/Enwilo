@@ -175,6 +175,19 @@ body {
 .login-btn:hover {
   color: #000;
 }
+/* Hover */
+.nav-links a:hover,
+.dropdown-toggle:hover {
+  color: #111;   /* thoda dark */
+}
+
+/* Active page (current page) */
+.nav-links a.active,
+.dropdown-toggle.active {
+  color: #000;   /* sabse dark */
+  font-weight: 600; /* optional */
+}
+
 
 /* ===================== */
 /* RESPONSIVE */

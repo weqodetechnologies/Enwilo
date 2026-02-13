@@ -103,30 +103,52 @@
       <p>Find the perfect courses and institutes from over 6000+ listings</p>
 
       <!-- SEARCH BAR -->
-      <div class="hero-search">
+      <!-- SEARCH BAR -->
+<div class="hero-search">
 
-        <div class="search-item">
-          <span class="label"><strong>Institute</strong></span>
-          <span class="value">
-           Select Institute
-          <i class="fa fa-angle-down value-icon"></i>
-          </span>
+  <!-- INSTITUTE -->
+  <div class="search-item dropdown-field" id="instField">
+    <span class="label"><strong>Institute</strong></span>
 
-        </div>
+    <button class="value select-btn" id="instBtn" type="button">
+      <span id="instText">Select Institute</span>
+      <i class="fa fa-angle-down value-icon"></i>
+    </button>
 
-        <div class="search-divider"></div>
+    <div class="select-menu" id="instMenu">
+      <button type="button" class="select-option" data-value="kids">Kids School</button>
+      <button type="button" class="select-option" data-value="primary">Primary Schools</button>
+      <button type="button" class="select-option" data-value="secondary">Secondary Schools</button>
+      <button type="button" class="select-option" data-value="college">Colleges</button>
+      <button type="button" class="select-option" data-value="coaching">Coaching Institute</button>
+    </div>
+  </div>
 
-        <div class="search-item">
-          <span class="label"><strong>Location</strong></span>
-          <span class="value">
-             Select Location<i class="fa fa-location-dot"></i>
-          </span>
-        </div>
+  <div class="search-divider"></div>
 
-        <button class="search-btn">
-          Search<i class="fa-sharp fa fa-magnifying-glass"></i>
-        </button>    
-      </div>
+  <!-- LOCATION -->
+  <div class="search-item dropdown-field" id="locField">
+    <span class="label"><strong>Location</strong></span>
+
+    <button class="value select-btn" id="locBtn" type="button">
+      <span id="locText">Select Location</span>
+    </button>
+
+    <div class="select-menu" id="locMenu">
+      <button type="button" class="select-option" data-value="nagpur">Nagpur</button>
+      <button type="button" class="select-option" data-value="pune">Pune</button>
+      <button type="button" class="select-option" data-value="mumbai">Mumbai</button>
+      <button type="button" class="select-option" data-value="chennai">Chennai</button>
+      <button type="button" class="select-option" data-value="assam">Assam</button>
+    </div>
+  </div>
+
+  <button class="search-btn" id="heroSearchBtn" type="button">
+    Search <i class="fa-sharp fa fa-magnifying-glass"></i>
+  </button>
+
+</div>
+
     </div>
   </div>
 </section>
@@ -149,12 +171,12 @@
       </div>
 
       <div class="category-card">
-        <h3>Primary</h3>
+        <h3>Primary School</h3>
         <img src="../images/primary.png" alt="Primary">
       </div>
 
       <div class="category-card">
-        <h3>Secondary</h3>
+        <h3>Secondary School</h3>
         <img src="../images/secondary.png" alt="Secondary">
       </div>
     </div>

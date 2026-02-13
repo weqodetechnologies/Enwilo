@@ -29,7 +29,7 @@ body {
   padding: 18px clamp(16px, 4vw, 95px);
   padding-top: 30px;
   gap: 16px;
-   width: 100%;
+  width: 100%;
   max-width: 1420px;     /* ✅ fixed max width */
   margin: 0 auto;
 }
@@ -179,6 +179,19 @@ body {
 .login-btn:hover {
   color: #000;
 }
+/* Hover */
+.nav-links a:hover,
+.dropdown-toggle:hover {
+  color: #111;   /* thoda dark */
+}
+
+/* Active page (current page) */
+.nav-links a.active,
+.dropdown-toggle.active {
+  color: #000;   /* sabse dark */
+  font-weight: 600; /* optional */
+}
+
 
 /* ===================== */
 /* RESPONSIVE */
@@ -379,7 +392,7 @@ body {
   font-size: clamp(14px, 1.6vw, 18px);
   font-weight: 600;
   color: #111;
-  margin-left: 20px;
+  margin-left: 30px;
   margin-bottom: 4px;
 }
 
@@ -424,8 +437,11 @@ body {
   gap: 8px;
   cursor: pointer;
   white-space: nowrap;
+  transition: all 0.3s ease;
 }
-
+.search-btn:hover{
+  background: #ea580c; /* darker orange */
+}
 
 .search-btn img {
   width: 24px;
@@ -503,6 +519,92 @@ body {
 /* HOVER */
 .category-card:hover {
   transform: translateY(-5px);
+}
+/* keep dropdown above hero image */
+.hero-search{ position: relative; z-index: 20; }
+
+.dropdown-field{ position: relative; }
+
+/* value row clickable */
+.select-btn{
+  background: transparent;
+  border: none;
+  width: 100%;
+  padding: 6px 8px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.select-btn:hover span,
+.select-btn:hover i{
+  color: #111;
+}
+
+
+/* dropdown menu - same width as field */
+.select-menu{
+  position: absolute;
+  left: 0;
+  top: calc(100% + 8px);
+  width: 200px ;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  box-shadow: 0 22px 50px rgba(0,0,0,0.16);
+  padding: 8px;
+  display: none;
+  z-index: 9999;
+  height: 130px ;
+
+  /* ✅ scroll if long */
+  max-height: 240px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.select-menu.show{ display: block; }
+
+.select-option{
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 12px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f172a;
+  text-align: left;
+}
+
+.select-option:hover{ background: #f4f6fb; }
+
+.select-option.selected{
+  background: #eef2ff;
+  color: #1e40af;
+}
+
+/* scrollbar */
+.select-menu::-webkit-scrollbar{ width: 6px; }
+.select-menu::-webkit-scrollbar-thumb{
+  background: rgba(0,0,0,0.18);
+  border-radius: 10px;
+}
+
+/* mobile: dropdown inline */
+@media (max-width: 768px){
+  .select-menu{
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    border-radius: 14px;
+    margin-top: 8px;
+  }
 }
 
 /* ===================== */
@@ -1340,21 +1442,23 @@ body {
 
 .institute-card img {
  width: 100%;
-  padding: 10px;
+  padding: 10px 10px 4px;
   border-radius: 24px;
   height: 170px;
   object-fit: cover;
+  margin-bottom: -13px;
 }
 
 
 .institute-content {
-  padding: 18px;
+  padding: 6px 16px 16px;
 }
 
 .institute-name {
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 10px;
+   margin-top: 0;
+  margin-bottom: 8px;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -1378,15 +1482,32 @@ body {
   gap: 6px;
   color: #888;
   font-size: 14px;
-  margin-bottom: 18px;
+  margin-bottom: 19px;
 }
 .review-count svg {
   width: 18px;
   height: 18px;
   opacity: 0.7;
 }
+
+/* ⭐ Rating row exact compact */
+.institute-rating-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding: 4px 0;   /* same as rating1 */
+  margin: 0;
+}
+/* ⭐ Stars no extra gap */
+.institute-rating-row .stars{
+  display:flex;
+  align-items:center;
+  gap:4px;
+  margin: 0;        /* IMPORTANT */
+}
 .stars{
-  margin-bottom: 18px;
+  margin: 0 !important;
 }
 /* ========================= */
 /* RESPONSIVE (KEEP LAPTOP SAME) */
@@ -1648,6 +1769,7 @@ body {
   box-shadow: 0 8px 20px rgba(30, 64, 175, 0.35);
 }
 
+
 /* NORMAL WHITE (SECOND LEVEL) */
 .chips-row:not(.secondary) .chip:not(.active) {
   padding: 12px 30px;
@@ -1687,6 +1809,31 @@ body {
 
 }
 
+/* Ensure all chips have padding (so active pe size jump na ho) */
+.chip{
+  padding: 12px 30px;
+}
+
+/* ✅ ONLY WHITE CHIPS ACTIVE (non-gray) */
+.chips-row:not(.secondary):not(.secondary1) .chip.active{
+  background: #1e40af;
+  color: #fff;
+  border-color: #1e40af;
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.35);
+}
+
+/* Keep gray chips exactly same */
+.chip.gray{
+  background: #ededed;
+  border-color: #ededed;
+  color: #333;
+  box-shadow: none;
+}
+
+/* Hover only white chips */
+.chips-row:not(.secondary):not(.secondary1) .chip:hover{
+  transform: translateY(-2px);
+}
 
 @media (max-width: 768px) {
   .chip {
@@ -1711,6 +1858,13 @@ body {
     padding: 10px 18px;
   }
 }
+/* Hover only for white chips (not gray) */
+.chip:not(.gray):hover{
+  background: #1e40af;
+  color: #fff;
+  border-color: #1e40af;
+}
+
 
 @media (max-width: 480px) {
   .chips-row {
@@ -1966,64 +2120,56 @@ body {
 
 /* BODY */
 .card1-body {
-  padding: 16px 16px 18px;
+  padding: 10px 16px 16px; 
 }
 
 /* ✅ FIX rating row (stars left, reviews right) */
 .rating1{
-  display:flex;
+   display:flex;
   align-items:center;
   justify-content:space-between;
   gap: 12px;
-  padding: 0 16px 10px;   /* optional: thoda spacing */
-  margin-bottom: -20px;
+  padding: 4px 16px 4px;   /* top/bottom compact */
+  margin: 0;
 }
 
 /* stars */
-.rating1 .stars{
+  .rating1 .stars{
   display:flex;
   align-items:center;
   gap: 4px;
-  flex: 1;             /* left side takes space */
-  margin-top: 18px;
+  margin: 0; 
 }
 
 .rating1 .stars i{
   color:#FBBF24;
   font-size:18px;
-  margin-top: 18px; 
+  margin: 0; 
 }
 
 /* reviews right side */
 .rating1 .review-count{
-  display:flex;
+   display:flex;
   align-items:center;
   gap:6px;
   color:#9AA0A6;
   font-size:14px;
   font-weight:500;
   flex-shrink:0;
-  margin-top: 18px;
   white-space:nowrap;
+  margin: 0; 
 }
 
-.rating1 .review-count i{
-  color:#9AA0A6;
-  font-size:16px;
-  margin-top: 18px; 
-}
-
+.rating1 .review-count i,
 .rating1 .review-count span{
-  display:inline-block;
-  min-width: 18px;
-  margin-top: 18px;
+  margin: 0;               /* ❌ remove top margin */
 }
 
 
 .card1-body h3 {
-  font-size: 18px;
+   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin: 0 0 8px;  /* top 4px only */
   font-family: "Montserrat", sans-serif;
 }
 
