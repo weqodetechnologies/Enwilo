@@ -310,15 +310,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  padding-top: 30px;
-  padding-bottom: 40px;
+
+  min-height: calc(100vh - 80px); 
+  padding: 10px 12px;      
 }
 
 .card {
-  background: #ffffff;
-  width: 400px;
-  padding: 35px 30px;
+   background: #ffffff;
+  width: 100%;
+  max-width: 400px; 
+  padding: 20px 22px;
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -404,8 +405,8 @@ input:focus {
 /* ✅ SMALL MOBILE FIXES */
 @media (max-width: 480px) {
   .card {
-    padding: 22px 18px;    /* ✅ less padding on small screens */
-    border-radius: 10px;
+    padding: 22px 14px;    /* ✅ less padding on small screens */
+    
   }
 
   .icon {
@@ -424,6 +425,12 @@ input:focus {
     font-size: 14px;
   }
 }
+@media (max-width: 480px) {
+  .page-wrapper {
+    padding: 24px 12px;     /* ✅ more fit on small phones */
+  }
+}
+
 
 
 

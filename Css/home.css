@@ -1295,17 +1295,21 @@ body {
 .features-area{
   display:flex;
   flex-direction:column;
-  gap: clamp(14px, 2.5vw, 28px);
+  gap: clamp(14px, 2.5vw, 38px);
   margin-bottom: clamp(24px, 4.5vw, 55px);
 }
 
-/* EACH ROW */
-.feature-row{
-  display:flex;
-  justify-content:center;
-  gap: clamp(12px, 3vw, 48px);
-  flex-wrap: wrap;              /* ✅ tablet/mobile wrap */
+
+.feature-row1,
+.feature-row2,
+.feature-row3,
+.feature-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(14px, 2vw, 30px);
 }
+
 
 /* PILL */
 .feature-pill{
