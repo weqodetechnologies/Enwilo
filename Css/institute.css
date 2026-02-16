@@ -95,9 +95,9 @@ body {
 .dropdown-menu {
   position: absolute;
   top: calc(100% + 10px);
-  left: 0;
-  background: #fff;
+  left: 0;                  /* opens from left of button */
   width: 240px;
+  background: #fff;
   border-radius: 14px;
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
   padding: 10px;
@@ -206,9 +206,6 @@ body {
     font-size: 16px;
   }
 
-  .dropdown-menu {
-    width: 220px;
-  }
 }
 
 /* Mobile */
@@ -233,14 +230,18 @@ body {
     flex-wrap: wrap;
   }
 
-  /* ✅ Make dropdown menu fit mobile screen */
+@media (max-width: 768px) {
   .dropdown-menu {
-    position: static;
-    width: 100%;
-    box-shadow: none;
-    border-radius: 12px;
-    margin-top: 8px;
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    top: 90px;
+    transform: translateY(25px);
+    width: auto;
   }
+}
+
+
 }
 
 /* Small mobile (iPhone SE) */
@@ -277,18 +278,6 @@ body {
     font-size: 16px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

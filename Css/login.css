@@ -15,7 +15,7 @@ body {
 /* NAVBAR (FLUID) */
 /* ===================== */
 .navbar {
-  position: relative;
+ position: relative;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -95,9 +95,9 @@ body {
 .dropdown-menu {
   position: absolute;
   top: calc(100% + 10px);
-  left: 0;
-  background: #fff;
+  left: 0;                  /* opens from left of button */
   width: 240px;
+  background: #fff;
   border-radius: 14px;
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
   padding: 10px;
@@ -188,6 +188,7 @@ body {
   font-weight: 600; /* optional */
 }
 
+
 /* ===================== */
 /* RESPONSIVE */
 /* ===================== */
@@ -205,17 +206,17 @@ body {
     font-size: 16px;
   }
 
-  .dropdown-menu {
-    width: 220px;
-  }
 }
 
 /* Mobile */
 @media (max-width: 768px) {
   .navbar {
+     max-width: 100%;
+    padding: 14px 16px;
+    padding-top: 14px;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 20px;
+    gap: 12px;
   }
 
   /* ✅ Make sections full width */
@@ -229,14 +230,18 @@ body {
     flex-wrap: wrap;
   }
 
-  /* ✅ Make dropdown menu fit mobile screen */
+@media (max-width: 768px) {
   .dropdown-menu {
-    position: static;
-    width: 100%;
-    box-shadow: none;
-    border-radius: 12px;
-    margin-top: 8px;
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    top: 90px;
+    transform: translateY(25px);
+    width: auto;
   }
+}
+
+
 }
 
 /* Small mobile (iPhone SE) */
@@ -271,27 +276,6 @@ body {
     height: 46px;
     padding: 9px 16px;
     font-size: 16px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px){
-  .add-btn{
-    min-width: 110px;          /* ✅ smaller on mobile */
-    height: 42px;
-    padding: 8px 14px;
-    font-size: 14px;
-  }
-}
-
-/* Small mobile */
-@media (max-width: 480px){
-  .add-btn{
-    width: auto !important;    /* ✅ override your old width:100% */
-    min-width: 100px;
-    height: 40px;
-    padding: 8px 12px;
-    font-size: 13px;
   }
 }
 

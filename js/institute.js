@@ -626,3 +626,30 @@ document.addEventListener("click", () => {
   }
 
 
+
+
+
+
+
+
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("instituteToggle");
+  const menu = document.getElementById("instituteMenu");
+  const dropdown = toggleBtn?.closest(".dropdown");
+
+  if (!toggleBtn || !menu || !dropdown) return;
+
+  toggleBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    menu.classList.toggle("show");
+    dropdown.classList.toggle("open");
+  });
+
+  document.addEventListener("click", () => {
+    menu.classList.remove("show");
+    dropdown.classList.remove("open");
+  });
+});
+
