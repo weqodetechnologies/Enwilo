@@ -15,7 +15,7 @@ body {
 /* NAVBAR (FLUID) */
 /* ===================== */
 .navbar {
- position: relative;
+  position: relative;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -25,8 +25,8 @@ body {
   padding: 18px clamp(16px, 4vw, 95px);
   padding-top: 30px;
   gap: 16px;
-   width: 100%;
-  max-width: 1420px;     /* ✅ fixed max width */
+  width: 100%;
+  max-width: 1420px; /* ✅ fixed max width */
   margin: 0 auto;
 }
 
@@ -95,7 +95,7 @@ body {
 .dropdown-menu {
   position: absolute;
   top: calc(100% + 10px);
-  left: 0;                  /* opens from left of button */
+  left: 0; /* opens from left of button */
   width: 240px;
   background: #fff;
   border-radius: 14px;
@@ -178,16 +178,15 @@ body {
 /* Hover */
 .nav-links a:hover,
 .dropdown-toggle:hover {
-  color: #111;   /* thoda dark */
+  color: #111; /* thoda dark */
 }
 
 /* Active page (current page) */
 .nav-links a.active,
 .dropdown-toggle.active {
-  color: #000;   /* sabse dark */
+  color: #000; /* sabse dark */
   font-weight: 600; /* optional */
 }
-
 
 /* ===================== */
 /* RESPONSIVE */
@@ -205,13 +204,12 @@ body {
     height: 46px;
     font-size: 16px;
   }
-
 }
 
 /* Mobile */
 @media (max-width: 768px) {
   .navbar {
-     max-width: 100%;
+    max-width: 100%;
     padding: 14px 16px;
     padding-top: 14px;
     flex-wrap: wrap;
@@ -230,18 +228,16 @@ body {
     flex-wrap: wrap;
   }
 
-@media (max-width: 768px) {
-  .dropdown-menu {
-    position: fixed;
-    left: 12px;
-    right: 12px;
-    top: 90px;
-    transform: translateY(25px);
-    width: auto;
+  @media (max-width: 768px) {
+    .dropdown-menu {
+      position: fixed;
+      left: 12px;
+      right: 12px;
+      top: 90px;
+      transform: translateY(25px);
+      width: auto;
+    }
   }
-}
-
-
 }
 
 /* Small mobile (iPhone SE) */
@@ -259,35 +255,25 @@ body {
   }
 }
 /* ===== Add Listing Button Responsive ===== */
-.add-btn{
-  width: auto;                 /* ✅ not fixed */
-  min-width: 140px;            /* ✅ desktop look */
+.add-btn {
+  width: auto; /* ✅ not fixed */
+  min-width: 140px; /* ✅ desktop look */
   height: 50px;
-  padding: 10px 18px;          /* ✅ better than fixed width */
+  padding: 10px 18px; /* ✅ better than fixed width */
   font-size: 17px;
   border-radius: 999px;
-  white-space: nowrap;         /* ✅ text break nahi hoga */
+  white-space: nowrap; /* ✅ text break nahi hoga */
 }
 
 /* Tablet */
-@media (max-width: 992px){
-  .add-btn{
+@media (max-width: 992px) {
+  .add-btn {
     min-width: 125px;
     height: 46px;
     padding: 9px 16px;
     font-size: 16px;
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 .contact-section {
   padding: clamp(50px, 6vw, 100px) 20px;
@@ -357,7 +343,7 @@ body {
 .icon-circle {
   width: 44px;
   height: 44px;
-  background: #F97316;
+  background: #f97316;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -377,13 +363,15 @@ body {
   background: #fff;
   border-radius: 18px;
   padding: clamp(18px, 3vw, 35px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  font-family: "Nunito", sans-serif;
 }
 
 .contact-form label {
   font-size: 14px;
   margin-bottom: 6px;
   display: inline-block;
+  font-family: "Nunito", sans-serif;
 }
 
 .contact-form input,
@@ -394,6 +382,7 @@ body {
   border-radius: 8px;
   border: 1px solid #ddd;
   font-size: 14px;
+  font-family: "Nunito", sans-serif;
 }
 
 .contact-form textarea {
@@ -407,7 +396,7 @@ body {
   padding: 14px;
   border-radius: 10px;
   border: none;
-  background: linear-gradient(90deg, #F97316, #F97316);
+  background: linear-gradient(90deg, #f97316, #f97316);
   color: #fff;
   font-size: 16px;
   cursor: pointer;
@@ -453,13 +442,6 @@ body {
   }
 }
 
-
-
-
-
-
-
-
 /* footer*/
 
 /* .footer {
@@ -470,11 +452,9 @@ body {
 
 .footer {
   background: #f7f8fa;
- 
 }
 
 .footer-container {
-
   margin: auto;
   display: grid;
   grid-template-columns: 2fr 1fr 1.5fr;
@@ -498,12 +478,10 @@ body {
   margin-bottom: 28px;
 }
 
-.footer-title h4{
+.footer-title h4 {
   font-size: 24px;
   font-family: "Montserrat", sans-serif;
 }
-
-
 
 /* EMAIL */
 .email-box {
@@ -516,9 +494,8 @@ body {
   background: #fff;
   padding: 4px;
   margin-top: 10px;
-  margin-bottom: 15px  ;
+  margin-bottom: 15px;
 }
-
 
 .email-box input {
   flex: 1;
@@ -535,7 +512,6 @@ body {
   border: none;
   box-shadow: none;
 }
-
 
 .email-box button {
   width: 60px;
@@ -565,8 +541,8 @@ body {
 .social-icons i {
   width: 40px;
   height: 40px;
-  background: #F97316;      /* same orange */
-  color: #fff;              /* icon white */
+  background: #f97316; /* same orange */
+  color: #fff; /* icon white */
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -575,11 +551,10 @@ body {
   cursor: pointer;
 }
 
-
 .icon-circle {
   width: 40px;
   height: 40px;
-  background: #F97316;   /* FIGMA ORANGE */
+  background: #f97316; /* FIGMA ORANGE */
   color: #fff;
   border-radius: 50%;
   display: flex;
@@ -593,9 +568,6 @@ body {
   height: 18px;
   filter: brightness(0) invert(1); /* icon white */
 }
-
-
-
 
 /* CENTER */
 .footer-heading {
@@ -660,7 +632,6 @@ body {
   font-weight: 600;
 }
 
-
 /* RESPONSIVE */
 @media (max-width: 992px) {
   .footer-container {
@@ -683,13 +654,13 @@ body {
 @media (max-width: 992px) {
   .footer-container {
     grid-template-columns: 1fr 1fr;
-    gap: 40px;            /* reduce huge gap */
-    padding: 50px 40px;   /* reduce padding */
+    gap: 40px; /* reduce huge gap */
+    padding: 50px 40px; /* reduce padding */
   }
 
   .email-box {
     width: 100%;
-    max-width: 320px;     /* looks good on tab */
+    max-width: 320px; /* looks good on tab */
   }
 }
 
@@ -698,7 +669,7 @@ body {
   .footer-container {
     grid-template-columns: 1fr;
     gap: 28px;
-    padding: 36px 18px;   /* mobile padding */
+    padding: 36px 18px; /* mobile padding */
   }
 
   .footer-logo {

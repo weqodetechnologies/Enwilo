@@ -278,7 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
   menu.querySelectorAll("a").forEach((a) => {
     a.addEventListener("click", () => {
       menu.classList.remove("show"); 
-      // yaha preventDefault mat lagana, nahi toh page open nahi hoga
+      
     });
   });
 
@@ -321,4 +321,63 @@ document.addEventListener("DOMContentLoaded", () => {
       link.classList.add("active");
     }
   });
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  function setupDropdown(btnId, menuId, textId) {
+    const btn = document.getElementById(btnId);
+    const menu = document.getElementById(menuId);
+    const text = document.getElementById(textId);
+
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      menu.classList.toggle("show");
+    });
+
+    menu.querySelectorAll(".select-option").forEach(option => {
+      option.addEventListener("click", function () {
+        text.innerText = this.innerText;
+        menu.classList.remove("show");
+      });
+    });
+
+    document.addEventListener("click", function () {
+      menu.classList.remove("show");
+    });
+  }
+
+  setupDropdown("instBtn", "instMenu", "instText");
+  setupDropdown("locBtn", "locMenu", "locText");
+
+  // ✅ SEARCH BUTTON LOGIC (UPDATED)
+  const searchBtn = document.getElementById("heroSearchBtn");
+
+  searchBtn.addEventListener("click", function () {
+    const institute = document.getElementById("instText").innerText.trim();
+    const location = document.getElementById("locText").innerText.trim();
+
+    if (institute === "Select Institute" || location === "Select Location") {
+      alert("Please select both Institute and Location");
+      return;
+    }
+
+    // 🔥 Redirect to institute page
+    window.location.href = `institute.html?type=${encodeURIComponent(institute)}&loc=${encodeURIComponent(location)}`;
+  });
+
+});
+
+
+
+
+
 
