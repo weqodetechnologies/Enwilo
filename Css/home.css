@@ -1457,6 +1457,7 @@ body {
   font-size: 12px;
   border-radius: 999px;
   border: 1px solid #ddd;
+  
 }
 
 .review-count {
@@ -1465,12 +1466,14 @@ body {
   gap: 6px;
   color: #888;
   font-size: 14px;
-  margin-bottom: 19px;
+   padding: 4px 16px 4px;   /* top/bottom compact */
+ 
 }
 .review-count svg {
   width: 18px;
   height: 18px;
   opacity: 0.7;
+  
 }
 
 /* ⭐ Rating row exact compact */
@@ -1481,6 +1484,7 @@ body {
   gap:12px;
   padding: 4px 0;   /* same as rating1 */
   margin: 0;
+  
 }
 /* ⭐ Stars no extra gap */
 .institute-rating-row .stars{
