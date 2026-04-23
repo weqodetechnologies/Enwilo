@@ -1466,8 +1466,7 @@ body {
   gap: 6px;
   color: #888;
   font-size: 14px;
-   padding: 4px 16px 4px;   /* top/bottom compact */
- 
+  margin-bottom: 4px;
 }
 .review-count svg {
   width: 18px;
